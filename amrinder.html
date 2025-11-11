@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tunex - Amrinder Gill</title>
+    <link rel="stylesheet" href="../css/singers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="#" class="logo">
+                    <i class="fas fa-compact-disc"></i>
+                    Tune<span>X</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Menu</div>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Charts</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-microphone"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-record-vinyl"></i>
+                    <span>Albums</span>
+                </a>
+            </nav>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Library</div>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-history"></i>
+                    <span>Recent</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorites</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-download"></i>
+                    <span>Downloads</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <button class="back-button" onclick="window.location.href = 'artists.html'">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <section class="artist-header">
+                <div class="artist-img-container">
+                    <img src="../images/amrinder_gill.jpg" alt="Amrinder Gill" />
+                </div>
+                <div class="artist-info">
+                    <div class="verified-artist">
+                        <i class="fas fa-check-circle"></i> Verified Artist
+                    </div>
+                    <h1 class="artist-name">Amrinder Gill</h1>
+                    <p class="monthly-listeners">5,512,992 monthly listeners</p>
+                </div>
+            </section>
+            
+            <section class="artist-actions">
+                <button class="play-btn" onclick="playPopularTrack()">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="following-btn">Following</button>
+                <button class="more-options-btn">...</button>
+            </section>
+
+            <section class="popular-tracks">
+                <h2 class="popular-tracks-title">Popular</h2>
+                <ul class="song-list">
+                    <li class="song-item">
+                        <span class="song-number">1</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/asi_gabru.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Judaa</span>
+                        </div>
+                        <div class="song-listeners">21,383,506</div>
+                        <div class="song-duration">2:09</div>
+                        <audio src="../songs/judaa.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">2</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/pendu.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Pendu</span>
+                        </div>
+                        <div class="song-listeners">34,587,060</div>
+                        <div class="song-duration">2:58</div>
+                        <audio src="../songs/pendu.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">3</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/paigaam2.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Paigaam</span>
+                        </div>
+                        <div class="song-listeners">12,123,456</div>
+                        <div class="song-duration">3:15</div>
+                        <audio src="../songs/paigaam.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">4</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/adore.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Adore</span>
+                        </div>
+                        <div class="song-listeners">9,876,543</div>
+                        <div class="song-duration">2:45</div>
+                        <audio src="../songs/adore.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">5</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/akhar.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Akhar</span>
+                        </div>
+                        <div class="song-listeners">8,543,210</div>
+                        <div class="song-duration">3:30</div>
+                        <audio src="../songs/akhar.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">6</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/chal_jindiye.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Chal Jindiye</span>
+                        </div>
+                        <div class="song-listeners">7,654,321</div>
+                        <div class="song-duration">4:01</div>
+                        <audio src="../songs/chal_jindiye.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">7</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/dildariyan.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Dildariyan</span>
+                        </div>
+                        <div class="song-listeners">6,543,210</div>
+                        <div class="song-duration">2:55</div>
+                        <audio src="../songs/dildarian.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">8</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/supna.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Supna</span>
+                        </div>
+                        <div class="song-listeners">5,432,109</div>
+                        <div class="song-duration">3:10</div>
+                        <audio src="../songs/supna.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">9</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/sohni_kudi.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Sohni Kudi</span>
+                        </div>
+                        <div class="song-listeners">4,321,098</div>
+                        <div class="song-duration">3:45</div>
+                        <audio src="../songs/sohni_kudi.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">10</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/kurta_suha.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Kurta Suha</span>
+                        </div>
+                        <div class="song-listeners">3,210,987</div>
+                        <div class="song-duration">3:05</div>
+                        <audio src="../songs/kurta_suha.mp3"></audio>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="albums-section">
+                <h2 class="popular-tracks-title">Albums</h2>
+                <div class="albums-grid">
+                    <div class="album-card">
+                        <img src="../images/dildariyan.jpg" alt="Album Cover" class="album-img-circle" />
+                        <div class="card-content">
+                            <h3 class="card-title">Dildarian</h3>
+                            <p class="card-subtitle">Amrinder Gill</p>
+                        </div>
+                        <button class="play-pause-btn-circle">
+                            <i class="fas fa-play play-icon"></i>
+                            <i class="fas fa-pause pause-icon"></i>
+                        </button>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3"></audio>
+                    </div>
+                    <div class="album-card">
+                        <img src="../images/asi_gabru.jpg" alt="Album Cover" class="album-img-circle" />
+                        <div class="card-content">
+                            <h3 class="card-title">Judaa</h3>
+                            <p class="card-subtitle">Amrinder Gill</p>
+                        </div>
+                        <button class="play-pause-btn-circle">
+                            <i class="fas fa-play play-icon"></i>
+                            <i class="fas fa-pause pause-icon"></i>
+                        </button>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3"></audio>
+                    </div>
+                    <div class="album-card">
+                        <img src="../images/judaa2.jpg" alt="Album Cover" class="album-img-circle" />
+                        <div class="card-content">
+                            <h3 class="card-title">Judaa2</h3>
+                            <p class="card-subtitle">Amrinder Gill</p>
+                        </div>
+                        <button class="play-pause-btn-circle">
+                            <i class="fas fa-play play-icon"></i>
+                            <i class="fas fa-pause pause-icon"></i>
+                        </button>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-14.mp3"></audio>
+                    </div>
+                    <div class="album-card">
+                        <img src="../images/judaa3.jpg" alt="Album Cover" class="album-img-circle" />
+                        <div class="card-content">
+                            <h3 class="card-title">Judaa3</h3>
+                            <p class="card-subtitle">Amrinder Gill</p>
+                        </div>
+                        <button class="play-pause-btn-circle">
+                            <i class="fas fa-play play-icon"></i>
+                            <i class="fas fa-pause pause-icon"></i>
+                        </button>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3"></audio>
+                    </div>
+                    <div class="album-card">
+                        <img src="../images/angrez.jpg" alt="Album Cover" class="album-img-circle" />
+                        <div class="card-content">
+                            <h3 class="card-title">Angrez</h3>
+                            <p class="card-subtitle">Amrinder Gill</p>
+                        </div>
+                        <button class="play-pause-btn-circle">
+                            <i class="fas fa-play play-icon"></i>
+                            <i class="fas fa-pause pause-icon"></i>
+                        </button>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3"></audio>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="playback-message" id="playbackMessage"></div>
+
+    <!-- Now Playing Bar -->
+    <div class="now-playing-bar" id="nowPlayingBar">
+        <div class="now-playing-left">
+            <img src="" alt="Album Cover" class="now-playing-cover" id="nowPlayingCover">
+            <div class="now-playing-info">
+                <span class="now-playing-title" id="nowPlayingTitle">No song playing</span>
+                <span class="now-playing-artist" id="nowPlayingArtist">Amrinder Gill</span>
+            </div>
+        </div>
+        <div class="now-playing-center">
+            <div class="player-controls">
+                <button class="player-control-btn small" id="shuffleBtn"><i class="fas fa-random"></i></button>
+                <button class="player-control-btn" id="prevBtn"><i class="fas fa-step-backward"></i></button>
+                <button class="player-control-btn main" id="mainPlayPauseBtn">
+                    <i class="fas fa-play" id="mainPlayIcon"></i>
+                    <i class="fas fa-pause" id="mainPauseIcon"></i>
+                </button>
+                <button class="player-control-btn" id="nextBtn"><i class="fas fa-step-forward"></i></button>
+                <button class="player-control-btn small" id="repeatBtn"><i class="fas fa-redo"></i></button>
+            </div>
+            <div class="progress-bar-container">
+                <span class="time-display" id="currentTime">0:00</span>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-bar-inner" id="progressBarInner"></div>
+                </div>
+                <span class="time-display" id="totalTime">0:00</span>
+            </div>
+        </div>
+        <div class="now-playing-right">
+            <!-- Volume controls if needed -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const songItems = document.querySelectorAll('.song-item, .album-card');
+            const nowPlayingBar = document.getElementById('nowPlayingBar');
+            const nowPlayingCover = document.getElementById('nowPlayingCover');
+            const nowPlayingTitle = document.getElementById('nowPlayingTitle');
+            const nowPlayingArtist = document.getElementById('nowPlayingArtist');
+            const mainPlayPauseBtn = document.getElementById('mainPlayPauseBtn');
+            const mainPlayIcon = document.getElementById('mainPlayIcon');
+            const mainPauseIcon = document.getElementById('mainPauseIcon');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const repeatBtn = document.getElementById('repeatBtn');
+            const currentTimeEl = document.getElementById('currentTime');
+            const totalTimeEl = document.getElementById('totalTime');
+            const progressBar = document.getElementById('progressBar');
+            const progressBarInner = document.getElementById('progressBarInner');
+
+            let currentAudio = null;
+            let currentTrackIndex = -1;
+            let isRepeating = false;
+
+            const tracks = Array.from(songItems);
+
+            function playTrack(index) {
+                if (index < 0 || index >= tracks.length) return;
+
+                if (currentAudio) {
+                    currentAudio.pause();
+                    const oldItem = tracks[currentTrackIndex];
+                    if (oldItem) oldItem.classList.remove('playing');
+                }
+
+                currentTrackIndex = index;
+                const item = tracks[currentTrackIndex];
+                const audio = item.querySelector('audio');
+                const cover = item.querySelector('img').src;
+                const title = item.querySelector('.song-title, .card-title').textContent;
+                const artist = item.querySelector('.card-subtitle') ? item.querySelector('.card-subtitle').textContent : 'Amrinder Gill';
+
+                audio.currentTime = 0;
+                audio.play();
+                currentAudio = audio;
+                item.classList.add('playing');
+
+                nowPlayingBar.style.display = 'grid';
+                nowPlayingCover.src = cover;
+                nowPlayingTitle.textContent = title;
+                nowPlayingArtist.textContent = artist;
+                mainPlayIcon.style.display = 'none';
+                mainPauseIcon.style.display = 'block';
+
+                currentAudio.addEventListener('timeupdate', updateProgress);
+                currentAudio.addEventListener('loadedmetadata', () => {
+                    totalTimeEl.textContent = formatTime(currentAudio.duration);
+                });
+                currentAudio.addEventListener('ended', playNextTrack);
+            }
+
+            function togglePlayPause() {
+                if (!currentAudio) {
+                    playTrack(0);
+                    return;
+                }
+                if (currentAudio.paused) {
+                    currentAudio.play();
+                    mainPlayIcon.style.display = 'none';
+                    mainPauseIcon.style.display = 'block';
+                    tracks[currentTrackIndex].classList.add('playing');
+                } else {
+                    currentAudio.pause();
+                    mainPlayIcon.style.display = 'block';
+                    mainPauseIcon.style.display = 'none';
+                    tracks[currentTrackIndex].classList.remove('playing');
+                }
+            }
+
+            function playNextTrack() {
+                if (isRepeating && currentAudio) {
+                    currentAudio.currentTime = 0;
+                    currentAudio.play();
+                } else {
+                    playTrack((currentTrackIndex + 1) % tracks.length);
+                }
+            }
+
+            function playPrevTrack() {
+                if (currentAudio && currentAudio.currentTime > 3) {
+                    currentAudio.currentTime = 0;
+                } else {
+                    playTrack((currentTrackIndex - 1 + tracks.length) % tracks.length);
+                }
+            }
+
+            function updateProgress() {
+                if (currentAudio && currentAudio.duration) {
+                    const progressPercent = (currentAudio.currentTime / currentAudio.duration) * 100;
+                    progressBarInner.style.width = `${progressPercent}%`;
+                    currentTimeEl.textContent = formatTime(currentAudio.currentTime);
+                }
+            }
+
+            function setProgress(e) {
+                const width = this.clientWidth;
+                const clickX = e.offsetX;
+                if (currentAudio && currentAudio.duration) {
+                    currentAudio.currentTime = (clickX / width) * currentAudio.duration;
+                }
+            }
+
+            function formatTime(seconds) {
+                const minutes = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+            }
+
+            tracks.forEach((item, index) => {
+                const playBtn = item.querySelector('.song-play-pause-btn, .play-pause-btn-circle');
+                if (playBtn) {
+                    playBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        if (currentTrackIndex === index && currentAudio && !currentAudio.paused) {
+                            togglePlayPause();
+                        } else {
+                            playTrack(index);
+                        }
+                    });
+                }
+            });
+
+            mainPlayPauseBtn.addEventListener('click', togglePlayPause);
+            nextBtn.addEventListener('click', playNextTrack);
+            prevBtn.addEventListener('click', playPrevTrack);
+            progressBar.addEventListener('click', setProgress);
+            repeatBtn.addEventListener('click', () => {
+                isRepeating = !isRepeating;
+                repeatBtn.style.color = isRepeating ? 'var(--primary)' : 'var(--text-muted)';
+            });
+
+            window.playPopularTrack = () => {
+                if (currentAudio && !currentAudio.paused) {
+                    togglePlayPause();
+                } else {
+                    playTrack(0);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

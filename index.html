@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tunex - Music Portal Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index10.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <button id="sidebar-toggle-btn" class="sidebar-toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="sidebar-logo">
+                <a href="#" class="logo">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>TuneX</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Menu</div>
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                
+                <a href="artists.html" class="nav-item">
+                    <i class="fas fa-microphone"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="albums.html" class="nav-item">
+                    <i class="fas fa-record-vinyl"></i>
+                    <span>Albums</span>
+                </a>
+            </nav>
+            <nav class="sidebar-nav">
+                <!-- log out button added
+                <div class="nav-title">Library</div>
+                <div class="nav-title">Account</div> -->
+                <a href="landing.html" class="nav-item" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+    </a>
+                
+                <a href="favorites_songs.html" class="nav-item">
+                    <i class="fas fa-music"></i>
+                    <span>Favorite Songs</span>
+                </a>
+                <a href="favorites_albums.html" class="nav-item">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>Favorite Albums</span>
+                </a>
+                <a href="favorites_artists.html" class="nav-item">
+                    <i class="fas fa-microphone-alt"></i>
+                    <span>Favorite Artists</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-download"></i>
+                    <span>Downloads</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <div class="header-content">
+                    <nav class="header-nav">
+                        <a href="#" class="active">Home</a>
+                        <a href="artists.html">Artists</a>
+                        <a href="albums.html">Albums</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact Us</a>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i> 
+                            <input type="text" id="searchInput" placeholder="Search Artists, Albums, Songs..." />
+                            <div id="searchResultsDropdown" class="search-results-dropdown">
+                            </div>
+                        </div>
+                        <div class="tunex-logo-container">
+                            <img src="../images/logo.jpg" alt="Tunex Logo" />
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Welcome Back!</h1>
+                    <p class="hero-subtitle">What's new? Discover your next favorite track.</p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn"><i class="fas fa-play"></i> Play a Mix</a>
+                        <a href="#" class="btn">Browse</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Featured <span>Albums</span></h2>
+                </div>
+                <div class="card-grid albums-grid">
+                    <div class="card" data-search-term="A For Arjan2 Arjan Dhillon" data-type="album" id="album-a-for-arjan2">
+                        <img src="../images/A_for_Arjan2.jpg" alt="Album Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">A For Arjan2</h3>
+                            <p class="card-subtitle">Arjan Dhillon</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='a_for_arjan2.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Limitless Prem Dhillon" data-type="album" id="album-limitless">
+                        <img src="../images/limitless.jpg" alt="Album Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Limitless</h3>
+                            <p class="card-subtitle">Prem Dhillon</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='limitless.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="P-Pop Culture Karan Aujla" data-type="album" id="album-p-pop-culture">
+                        <img src="../images/simpsons.jpg" alt="Album Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Simpsons</h3>
+                            <p class="card-subtitle">Cheema Y</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='simpsons.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Alpha Jordan Sandhu" data-type="album" id="album-alpha">
+                        <img src="../images/alpha.jpg" alt="Album Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Alpha</h3>
+                            <p class="card-subtitle">Jordan Sandhu</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='alpha.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Moosetape Sidhu Moosewala" data-type="album" id="album-moosetape">
+                        <img src="../images/a_for_arjan.jpg" alt="Album Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">A for Arjan</h3>
+                            <p class="card-subtitle">Arjan Dhillon</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='a_for_arjan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Young Goat Cheema Y" data-type="album" id="album-young-goat">
+                        <img src="../images/young_goat.jpg" alt="Album Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Young Goat</h3>
+                            <p class="card-subtitle">Cheema Y</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='young_goat.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Way Maker Navaan Sandhu" data-type="album" id="album-way-maker">
+                        <img src="../images/way_maker.jpg" alt="Album Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Way Maker</h3>
+                            <p class="card-subtitle">Navaan Sandhu</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='waymaker.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="V8 Join us" data-type="album" id="album-v8">
+                        <img src="../images/join_us.jpg" alt="Album Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">V8</h3>
+                            <p class="card-subtitle">Join us</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='waymaker.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Sicario Shubh" data-type="album" id="album-sicario">
+                        <img src="../images/sicario.jpg" alt="Album Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Sicario</h3>
+                            <p class="card-subtitle">Shubh</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='sicario.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Mahol Hustinder" data-type="album" id="album-mahol">
+                        <img src="../images/timeless.jpg" alt="Album Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Timeless</h3>
+                            <p class="card-subtitle">Hustinder</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='timeless.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3"></audio>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Popular <span>Artists</span></h2>
+                </div>
+                <div class="card-grid artists-grid">
+                    <div class="card" data-search-term="Arjan Dhillon Punjabi Pop" data-type="artist" id="artist-arjan-dhillon">
+                        <img src="../images/arjan-dhillon.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Arjan Dhillon</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='arjan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Karan Aujla Punjabi Rapper" data-type="artist" id="artist-karan-aujla">
+                        <img src="../images/aujla.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Karan Aujla</h3>
+                            <p class="card-subtitle">Punjabi Rapper</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='karan_aujla.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Sidhu Moosewala Legend" data-type="artist" id="artist-sidhu-moosewala">
+                        <img src="../images/sidhu1.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Sidhu Moosewala</h3>
+                            <p class="card-subtitle">Legend</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='sidhu.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Diljit Urban Punjabi" data-type="artist" id="artist-diljit">
+                        <img src="../images/diljit1.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Diljit</h3>
+                            <p class="card-subtitle">Urban Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='diljit.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Prem Dhillon Punjabi Pop" data-type="artist" id="artist-prem-dhillon">
+                        <img src="../images/prem_dhillon.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Prem Dhillon</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='prem.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Amrinder Gill Folk Legend" data-type="artist" id="artist-amrinder-gill">
+                        <img src="../images/amrinder_gill.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Amrinder Gill</h3>
+                            <p class="card-subtitle">Folk Legend</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='amrinder.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Jordan Sandhu Punjabi Pop" data-type="artist" id="artist-jordan-sandhu">
+                        <img src="../images/jordan1.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Jordan Sandhu</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='jordan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Babbu Maan Punjabio Pop" data-type="artist" id="artist-babbu-maan">
+                        <img src="../images/babbu_maan.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Babbu Maan</h3>
+                            <p class="card-subtitle">Punjabio Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Sharry Maan Folk Music" data-type="artist" id="artist-sharry-maan">
+                        <img src="../images/sharry.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Sharry Maan</h3>
+                            <p class="card-subtitle">Folk Music</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Shubh Hip hop" data-type="artist" id="artist-shubh">
+                        <img src="../images/shubh1.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Shubh</h3>
+                            <p class="card-subtitle">Hip hop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3"></audio>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Top <span>Songs</span></h2>
+                </div>
+                <div class="card-grid songs-grid">
+                    <div class="card" data-search-term="Astarr Prem Dhillon" data-type="song" id="song-astarr">
+                        <img src="../images/4_da_gang.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Astarr</h3>
+                            <p class="card-subtitle">Prem Dhillon</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/astarr.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Paparaazi Arjan Dhillon" data-type="song" id="song-paparaazi">
+                        <img src="../images/paparaazi.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Paparaazi</h3>
+                            <p class="card-subtitle">Arjan Dhillon</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/paparaazi.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Join Us Jass Bajwa" data-type="song" id="song-join-us">
+                        <img src="../images/join_us.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Join Us</h3>
+                            <p class="card-subtitle">Jass Bajwa</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/join_us.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="God's Grace Jordan Sandhu" data-type="song" id="song-gods-grace">
+                        <img src="../images/gods_grace.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">God's Grace</h3>
+                            <p class="card-subtitle">Jordan Sandhu</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/Gods_grace.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Alarm Cheema Y" data-type="song" id="song-alarm">
+                        <img src="../images/young_goat.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Alarm</h3>
+                            <p class="card-subtitle">Cheema Y</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/alarm.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="King Shit Shubh" data-type="song" id="song-king-shit">
+                        <img src="../images/king_shit.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">King Shit</h3>
+                            <p class="card-subtitle">Shubh</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/king_shit.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Pittal Sidhu Moosewala" data-type="song" id="song-pittal">
+                        <img src="../images/pittal.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Pittal</h3>
+                            <p class="card-subtitle">Sidhu Moosewala</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/pittal.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Winning Speech Karan Aujla" data-type="song" id="song-winning-speech">
+                        <img src="../images/winning_speech.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Winning Speech</h3>
+                            <p class="card-subtitle">Karan Aujla</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/winning_speech.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Responsibility Dilpreet Dhillon" data-type="song" id="song-responsibility">
+                        <img src="../images/responsibility.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Responsibility</h3>
+                            <p class="card-subtitle">Dilpreet Dhillon</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/responsibility.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Cartier Navaan Sandhu" data-type="song" id="song-cartier">
+                        <img src="../images/paper_before_money.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Cartier</h3>
+                            <p class="card-subtitle">Navaan Sandhu</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/cartier.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Reshmi Rumaal Arjan Dhillon" data-type="song" id="song-reshmi-rumaal">
+                        <img src="../images/A_for_Arjan.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Reshmi Rumaal</h3>
+                            <p class="card-subtitle">Arjan Dhillon</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/reshmi_rumaal.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Wonders Nimrat Khaira" data-type="song" id="song-wonders">
+                        <img src="../images/wonders.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Wonders</h3>
+                            <p class="card-subtitle">Nimrat Khaira</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/wonders.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Vail Purane Hustinder" data-type="song" id="song-vail-purane">
+                        <img src="../images/timeless.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Vail Purane</h3>
+                            <p class="card-subtitle">Hustinder</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/vail_purane.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Sohni Kudi Amrinder Gill" data-type="song" id="song-sohni-kudi">
+                        <img src="../images/sohni_kudi.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Sohni Kudi</h3>
+                            <p class="card-subtitle">Amrinder Gill</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/sohni_kudi.mp3"></audio>
+                    </div>
+                    <div class="card" data-search-term="Hussan Illahi Wazir Pattar" data-type="song" id="song-hussan-illahi">
+                        <img src="../images/hussan_illahi.jpg" alt="Song Cover" class="card-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Hussan Illahi</h3>
+                            <p class="card-subtitle">Wazir Pattar</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <audio src="../songs/hussan_illahi.mp3"></audio>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <div class="playback-message" id="playbackMessage"></div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Tune<span>X</span></h3>
+                    <p>Tunex is your ultimate music destination to discover new artists, stream music, and get tickets to the hottest events.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="artists2.html">Artists</a></li>
+                        <li><a href="albums3.html">Albums</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Top Genres</h3>
+                    <ul>
+                        <li><a href="#">Pop</a></li>
+                        <li><a href="#">Rock</a></li>
+                        <li><a href="#">Hip Hop</a></li>
+                        <li><a href="#">Electronic</a></li>
+                        <li><a href="#">Jazz</a></li>
+                        <li><a href="#">R&B</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates on new releases, events, and exclusive content.</p>
+                    <div class="newsletter">
+                        <form action="#">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Tunex Music Portal. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Logout Confirmation Modal -->
+<div class="logout-modal" id="logoutModal">
+    <div class="logout-modal-content">
+        <h3>Logout</h3>
+        <p>Are you sure you want to logout from TuneX?</p>
+        <div class="logout-modal-buttons">
+            <button class="logout-cancel-btn" id="logoutCancelBtn">Cancel</button>
+            <button class="logout-confirm-btn" id="logoutConfirmBtn">Yes, Logout</button>
+        </div>
+    </div>
+</div>
+    
+    <script src="../js/index10.js"></script>
+</body>
+</html>

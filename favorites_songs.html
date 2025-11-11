@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tunex - My Favorite Songs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #bf0603;
+            --secondary: #f4d58d;
+            --dark-bg: #001427;
+            --mid-bg: #001427;
+            --light-bg: #708d81;
+            --footer-bg: #001427;
+            --card-bg: rgba(255, 255, 255, 0.1);
+            --card-hover: rgba(255, 255, 255, 0.15);
+            --text-primary: #fff;
+            --text-secondary: #e2e2e2;
+            --text-muted: #b3b3b3;
+            --sidebar-width: 250px;
+            --shadow-primary: 191, 6, 3;
+            --shadow-secondary: 244, 213, 141;
+            --shadow-tertiary: 255, 255, 255;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg), var(--mid-bg), var(--light-bg));
+            background-size: 400% 400%;
+            color: var(--text-primary);
+            line-height: 1.6;
+            animation: backgroundShift 15s ease infinite;
+            overflow-x: hidden;
+        }
+
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            height: 100vh;
+            padding: 20px 0;
+            overflow-y: auto;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        .sidebar-toggle-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1010;
+        }
+
+        .sidebar-logo {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 5px rgba(var(--shadow-primary), 0.5);
+        }
+
+        .logo i {
+            margin-right: 8px;
+            font-size: 24px;
+            transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .sidebar-nav {
+            padding: 0 20px;
+            margin-bottom: 30px;
+        }
+
+        .nav-title {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease, box-shadow 0.3s;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+
+        .nav-item i {
+            margin-right: 15px;
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            color: var(--primary);
+            background: rgba(var(--shadow-primary), 0.08);
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(var(--shadow-primary), 0.5);
+        }
+
+        .nav-item.active {
+            color: var(--primary);
+            background: rgba(var(--shadow-primary), 0.1);
+            box-shadow: inset 0 0 10px rgba(var(--shadow-primary), 0.5), 0 0 10px rgba(var(--shadow-primary), 0.5);
+        }
+        
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            min-height: 100vh;
+            transition: margin-left 0.3s ease;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .section-title span {
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(var(--shadow-primary), 0.8);
+        }
+        
+        /* Grid Card Layouts (Modified for full-page display) */
+        .favorites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+            padding-bottom: 15px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s, border 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: var(--card-hover);
+            box-shadow: 0 20px 40px rgba(var(--shadow-primary), 0.8);
+        }
+
+        .card.favorited {
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 25px rgba(var(--shadow-primary), 0.5);
+        }
+        
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.4s ease, filter 0.3s ease;
+        }
+
+        .artist-img {
+            border-radius: 50%;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+            padding: 15px;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .card-subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .card-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+            display: flex;
+            gap: 10px;
+        }
+        
+        /* Favorite Button Styles */
+        .favorite-btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+        }
+
+        .favorite-btn i {
+            color: white;
+            font-size: 16px;
+        }
+
+        .card.favorited .favorite-btn i {
+            color: var(--primary);
+        }
+        
+        /* Play/Pause Button Styles */
+        .play-pause-btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(var(--shadow-secondary), 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .play-pause-btn i {
+            color: var(--dark-bg);
+            font-size: 14px;
+        }
+        /* End Card Styles */
+
+        /* Utility Styles */
+        .empty-state {
+            text-align: center;
+            padding: 50px;
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+        }
+        .empty-state i {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .empty-state h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .empty-state p {
+            color: var(--text-muted);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .sidebar { width: 80px; }
+            .main-content { margin-left: 80px; padding: 20px; }
+            .logo span, .nav-title, .nav-item span { display: none; }
+            .nav-item { justify-content: center; }
+            .favorites-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+        }
+
+        @media (max-width: 768px) {
+            .main-content { margin-left: 0; }
+            .favorites-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+        }
+        
+        /* Keyframes */
+        @keyframes backgroundShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <!-- Simplified sidebar for the sub-page navigation -->
+            <div class="sidebar-logo">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>TuneX</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Menu</div>
+                <a href="index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </nav>
+            <nav class="sidebar-nav">
+                <div class="nav-title">My Favorites</div>
+                <a href="favorites_songs.html" class="nav-item active">
+                    <i class="fas fa-music"></i>
+                    <span>Songs</span>
+                </a>
+                <a href="favorites_albums.html" class="nav-item">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>Albums</span>
+                </a>
+                <a href="favorites_artists.html" class="nav-item">
+                    <i class="fas fa-microphone"></i>
+                    <span>Artists</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">My Favorite <span>Songs</span></h2>
+                </div>
+                <div id="favorites-container" class="favorites-grid">
+                    <!-- Favorite songs will be rendered here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="playback-message" id="playbackMessage"></div>
+    
+  <script>
+    // Global utility variables for playback message
+    let playbackMessage = document.getElementById('playbackMessage');
+    let playbackTimeout = null;
+    let currentAudio = null;
+    const FAVORITES_KEY = 'tunexFavorites';
+    const PAGE_TYPE = 'song'; // This page focuses on 'song' favorites
+
+    /**
+     * Utility function to show a transient message (replaces alert()).
+     */
+    function showPlaybackMessage(message) {
+        clearTimeout(playbackTimeout);
+        if (!playbackMessage) {
+            playbackMessage = document.getElementById('playbackMessage');
+        }
+        if (playbackMessage) {
+            playbackMessage.textContent = message;
+            playbackMessage.style.display = 'block';
+            playbackMessage.style.opacity = '1';
+            playbackTimeout = setTimeout(() => {
+                playbackMessage.style.opacity = '0';
+                setTimeout(() => { playbackMessage.style.display = 'none'; }, 500);
+            }, 3000);
+        }
+    }
+
+    /**
+     * Toggles the favorite status and updates local storage and UI.
+     */
+    window.toggleFavorite = function(cardElement) {
+        const cardId = cardElement.id;
+        const title = cardElement.querySelector('.card-title').textContent;
+
+        // Get current favorites
+        let favorites = JSON.parse(localStorage.getItem(FAVORITES_KEY) || '[]');
+
+        // Remove from favorites (because this page only shows favorited items)
+        favorites = favorites.filter(fav => fav.id !== cardId);
+
+        // Save updated favorites back to local storage
+        localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
+
+        // Remove the card from the DOM
+        cardElement.remove();
+        showPlaybackMessage(`Removed "${title}" from favorites.`);
+
+        // Check if the list is now empty
+        if (favorites.filter(f => f.type === PAGE_TYPE).length === 0) {
+            renderEmptyState();
+        }
+    }
+
+    /**
+     * Pauses the currently playing audio.
+     */
+    function stopCurrentAudio() {
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            const previousCard = currentAudio.closest('.card');
+            if (previousCard) previousCard.classList.remove('playing');
+            currentAudio = null;
+            showPlaybackMessage("Playback stopped.");
+        }
+    }
+
+    /**
+     * Handles playing/pausing music. 
+     */
+    window.playAudio = function(cardElement) {
+        const audio = cardElement.querySelector('audio');
+        const title = cardElement.querySelector('.card-title').textContent;
+
+        if (!audio) return;
+
+        if (audio === currentAudio && !audio.paused) {
+            // Pause current audio
+            stopCurrentAudio();
+        } else {
+            // Stop any other audio before playing this one
+            stopCurrentAudio();
+
+            // Play new audio
+            audio.play();
+            currentAudio = audio;
+            cardElement.classList.add('playing');
+            showPlaybackMessage(`Now playing: "${title}"`);
+        }
+    }
+
+    /**
+     * Renders the empty state when no favorites are present.
+     */
+    function renderEmptyState() {
+        const container = document.getElementById('favorites-container');
+        container.innerHTML = `
+            <div class="empty-state" style="grid-column: 1 / -1;">
+                <i class="fas fa-heart-broken"></i>
+                <h3>No Favorite Songs Found</h3>
+                <p>Tap the heart icon on any song on the Home page to add it here!</p>
+                <a href="index.html" class="btn" style="margin-top: 20px;">
+                    <i class="fas fa-search"></i> Go Discover Music
+                </a>
+            </div>
+        `;
+    }
+
+    /**
+     * Loads and renders favorite items of a specific type.
+     */
+    function loadFavoritesForPage() {
+        const favorites = JSON.parse(localStorage.getItem(FAVORITES_KEY) || '[]');
+        const filteredFavorites = favorites.filter(fav => fav.type === PAGE_TYPE);
+        const container = document.getElementById('favorites-container');
+        container.innerHTML = '';
+
+        if (filteredFavorites.length === 0) {
+            renderEmptyState();
+            return;
+        }
+
+        filteredFavorites.forEach(fav => {
+            const card = document.createElement('div');
+            card.id = fav.id;
+            card.setAttribute('data-type', fav.type);
+            card.classList.add('card', 'favorited');
+
+            const imgSrc = fav.imgSrc 
+                ? fav.imgSrc 
+                : `https://placehold.co/220x220/3d3d3d/ffffff?text=${encodeURIComponent(fav.title.substring(0, 10))}`;
+
+            const audioSrc = fav.audioSrc 
+                ? fav.audioSrc 
+                : "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
+
+            card.innerHTML = `
+                <img src="${imgSrc}" alt="${fav.title} Cover" class="card-img"
+                     onerror="this.onerror=null; this.src='https://placehold.co/220x220/3d3d3d/ffffff?text=Missing+Cover';">
+                <div class="card-content">
+                    <h3 class="card-title">${fav.title}</h3>
+                    <p class="card-subtitle">${fav.subtitle}</p>
+                </div>
+                <div class="card-controls">
+                    <button class="favorite-btn" onclick="toggleFavorite(this.closest('.card'))">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="play-pause-btn" onclick="playAudio(this.closest('.card'))">
+                        <i class="fas fa-play play-icon"></i>
+                        <i class="fas fa-pause pause-icon" style="display: none;"></i>
+                    </button>
+                </div>
+                <audio src="${audioSrc}"></audio>
+            `;
+
+            // Reset playback state when audio ends
+            const audio = card.querySelector('audio');
+            if (audio) {
+                audio.addEventListener('ended', () => {
+                    card.classList.remove('playing');
+                    currentAudio = null;
+                    showPlaybackMessage(`Finished playing: "${fav.title}"`);
+                });
+            }
+
+            container.appendChild(card);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', loadFavoritesForPage);
+</script>
+
+</body>
+</html>

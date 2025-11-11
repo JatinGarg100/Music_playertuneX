@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artists - TuneX Music Portal</title>
+    <link rel="stylesheet" href="../css/artists.css">
+    <link rel="stylesheet" href="../css/artists3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <button id="sidebar-toggle-btn" class="sidebar-toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="sidebar-logo">
+                <a href="index10.html" class="logo">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>TuneX</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Menu</div>
+                <a href="index10.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-microphone"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="albums.html" class="nav-item">
+                    <i class="fas fa-record-vinyl"></i>
+                    <span>Albums</span>
+                </a>
+            </nav>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Library</div>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-history"></i>
+                    <span>Recent</span>
+                </a>
+                <a href="favorites_songs.html" class="nav-item">
+                    <i class="fas fa-music"></i>
+                    <span>Favorite Songs</span>
+                </a>
+                <a href="favorites_albums.html" class="nav-item">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>Favorite Albums</span>
+                </a>
+                <a href="favorites_artists.html" class="nav-item">
+                    <i class="fas fa-microphone-alt"></i>
+                    <span>Favorite Artists</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-download"></i>
+                    <span>Downloads</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <div class="header-content">
+                    <nav class="header-nav">
+                        <a href="index10.html">Home</a>
+                        <a href="#" class="active">Artists</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="about.html">About Us</a>
+                        <a href="#">Features</a>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchInput" placeholder="Search Artists..." />
+                            <div id="searchResultsDropdown" class="search-results-dropdown">
+                            </div>
+                        </div>
+                        <div class="tunex-logo-container">
+                            <img src="../images/logo.jpg" alt="Tunex Logo" />
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Meet the Artists</h1>
+                    <p class="hero-subtitle">Explore a world of music through our talented creators.</p>
+                    <div class="hero-actions">
+                        <button id="featured-btn" class="btn"><i class="fas fa-star"></i> Featured Artists</button>
+                        <button id="all-artists-btn" class="btn active">All Artists</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">All <span>Artists</span></h2>
+                </div>
+                <div class="card-grid" id="artist-grid">
+
+                    <div class="card" id="artist-arjan-dhillon" data-type="artist"
+                        data-search-term="Arjan Dhillon Punjabi Pop">
+                        <img src="../images/arjan-dhillon.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Arjan Dhillon</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='arjan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-karan-aujla" data-type="artist"
+                        data-search-term="Karan Aujla Punjabi Rapper">
+                        <img src="../images/aujla.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Karan Aujla</h3>
+                            <p class="card-subtitle">Punjabi Rapper</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='karan_aujla.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-sidhu-moosewala" data-type="artist"
+                        data-search-term="Sidhu Moosewala Legend">
+                        <img src="../images/sidhu1.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Sidhu Moosewala</h3>
+                            <p class="card-subtitle">Legend</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='sidhu.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-diljit-dosanjh" data-type="artist"
+                        data-search-term="Diljit Dosanjh Urban Punjabi">
+                        <img src="../images/diljit1.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Diljit Dosanjh</h3>
+                            <p class="card-subtitle">Urban Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='diljit.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-prem-dhillon" data-type="artist"
+                        data-search-term="Prem Dhillon Punjabi Pop">
+                        <img src="../images/prem_dhillon.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Prem Dhillon</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='prem.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-amrinder-gill" data-type="artist"
+                        data-search-term="Amrinder Gill Folk Legend">
+                        <img src="../images/amrinder_gill.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Amrinder Gill</h3>
+                            <p class="card-subtitle">Folk Legend</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='amrinder.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-jordan-sandhu" data-type="artist"
+                        data-search-term="Jordan Sandhu Punjabi Pop">
+                        <img src="../images/jordan1.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Jordan Sandhu</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='jordan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-navaan-sandhu" data-type="artist"
+                        data-search-term="Navaan Sandhu Punjabi Pop">
+                        <img src="../images/navaan.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Navaan Sandhu</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='navaan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-sharry-maan" data-type="artist"
+                        data-search-term="Sharry Maan Folk Music">
+                        <img src="../images/sharry.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Sharry Maan</h3>
+                            <p class="card-subtitle">Folk Music</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='sharry_maan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-shubh" data-type="artist" data-search-term="Shubh Hip hop">
+                        <img src="../images/shubh.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Shubh</h3>
+                            <p class="card-subtitle">Hip hop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='shubh.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-ap-dhillon" data-type="artist" data-search-term="A P Dhillon Hip hop">
+                        <img src="../images/shubh.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">A.P. Dhillon</h3>
+                            <p class="card-subtitle">Hip hop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='a_p_dhillon.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-nimrat-khaira" data-type="artist"
+                        data-search-term="Nimrat Khaira Folk Singer">
+                        <img src="../images/nimrat.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Nimrat Khaira</h3>
+                            <p class="card-subtitle">Folk Singer</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='nimrat_khaira.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-ranjit-bawa" data-type="artist" data-search-term="Ranjit Bawa Bhangra">
+                        <img src="../images/ranjit_bawa.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Ranjit Bawa</h3>
+                            <p class="card-subtitle">Bhangra</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='ranjit_bawa.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-parmish-verma" data-type="artist"
+                        data-search-term="Parmish Verma Punjabi Pop">
+                        <img src="../images/parmish.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Parmish Verma</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='parmish_verma.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-cheema-y" data-type="artist" data-search-term="Cheema Y Gangster Pop">
+                        <img src="../images/cheemay.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Cheema Y</h3>
+                            <p class="card-subtitle">Gangster Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='cheema_y.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-tarsem-jassar" data-type="artist"
+                        data-search-term="Tarsem Jassar Punjabi Pop">
+                        <img src="../images/jassar.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Tarsem Jassar</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='tarsem_jassar.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-hustinder" data-type="artist"
+                        data-search-term="Hustinder Romantic Pop">
+                        <img src="../images/hustinder.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Hustinder</h3>
+                            <p class="card-subtitle">Romantic Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='hustinder.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-gur-sidhu" data-type="artist" data-search-term="Gur Sidhu Urban Pop">
+                        <img src="../images/gur_sidhu.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Gur Sidhu</h3>
+                            <p class="card-subtitle">Urban Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='gur_sidhu.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-nirvair-pannu" data-type="artist"
+                        data-search-term="Nirvair Pannu Romantic Pop">
+                        <img src="../images/nirvair.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Nirvair Pannu</h3>
+                            <p class="card-subtitle">Romantic Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='nirvair_pannu.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-kulbir-jhinjer" data-type="artist"
+                        data-search-term="Kulbir Jhinjer Punjabi Pop">
+                        <img src="../images/kulbir_jhinjer.jpg" alt="Artist" class="artist-img" />
+                        <div class="featured-star"><i class="fas fa-star"></i></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Kulbir Jhinjer</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='kulbir_jhinjer.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-jass-bajwa" data-type="artist"
+                        data-search-term="Jass Bajwa urban Punjabi">
+                        <img src="../images/jass_bajwa.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Jass Bajwa</h3>
+                            <p class="card-subtitle">urban Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='jass_bajwa.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-jassa-dhillon" data-type="artist"
+                        data-search-term="Jassa Dhillon Punjabi Pop">
+                        <img src="../images/jassa_dhillon.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Jassa Dhillon</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='jassa_dhillon.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-amar-sehmbi" data-type="artist"
+                        data-search-term="Amar Sehmbi Folk Singer">
+                        <img src="../images/amar_sehmbi.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Amar Sehmbi</h3>
+                            <p class="card-subtitle">Folk Singer</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='amar_sehmbi.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-babbu-maan" data-type="artist" data-search-term="Babbu Maan Hip Hop">
+                        <img src="../images/babbu_maan1.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Babbu Maan</h3>
+                            <p class="card-subtitle">Hip Hop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='babbu_maan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-sabi-bhinder" data-type="artist" data-search-term="Sabi Bhinder Hip hop">
+                        <img src="../images/sabi_bhinder.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Sabi Bhinder</h3>
+                            <p class="card-subtitle">Hip hop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='sabi_bhinder.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-badshah" data-type="artist" data-search-term="Badshah Rapper">
+                        <img src="../images/badshah.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Badshah</h3>
+                            <p class="card-subtitle">Rapper</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='badshah.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-sultaan" data-type="artist" data-search-term="Sultaan Gully Rap">
+                        <img src="../images/sultan.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Sultaan</h3>
+                            <p class="card-subtitle">Gully Rap</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='sultaan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-ammy-virk" data-type="artist" data-search-term="Ammy Virk Hip hop">
+                        <img src="../images/ammy_virk.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Ammy Virk</h3>
+                            <p class="card-subtitle">Hip hop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='ammy_virk.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-jass-manak" data-type="artist"
+                        data-search-term="Jass Manak Punjabi Pop">
+                        <img src="../images/jass_manak.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Jass Manak</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='jass_manak.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-nijjar" data-type="artist" data-search-term="Nijjar Punjabi Rap">
+                        <img src="../images/nijjar.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Nijjar</h3>
+                            <p class="card-subtitle">Punjabi Rap</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='nijjar.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-wazir-patar" data-type="artist"
+                        data-search-term="Wazir Patar Romantic Pop">
+                        <img src="../images/wazir_patar.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Wazir Patar</h3>
+                            <p class="card-subtitle">Romantic Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='wazir_patar.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-sunanda-sharma" data-type="artist"
+                        data-search-term="Sunanda Sharma Bhangra">
+                        <img src="../images/sunanda_sharma.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Sunanda Sharma</h3>
+                            <p class="card-subtitle">Bhangra</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='sunanda_sharma.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-gurlez-akhtar" data-type="artist"
+                        data-search-term="Gurlez Akhtar Punjabi">
+                        <img src="../images/gurlez_akhtar.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Gurlez Akhtar</h3>
+                            <p class="card-subtitle">Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='gurlez_akhtar.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-satinder-sartaaj" data-type="artist"
+                        data-search-term="Satinder Sartaaj Sufi Singer">
+                        <img src="../images/satinder_sartaaj.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Satinder Sartaaj</h3>
+                            <p class="card-subtitle">Sufi Singer</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='satinder_sartaaj.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-dilpreet-dhillon" data-type="artist"
+                        data-search-term="Dilpreet Dhillon Gangster Pop">
+                        <img src="../images/dilpreet_dhillon.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Dilpreet Dhillon</h3>
+                            <p class="card-subtitle">Gangster Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='dilpreet_dhillon.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-gippy-grewal" data-type="artist"
+                        data-search-term="Gippy Grewal Punjabi Pop">
+                        <img src="../images/gippy_grewal.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Gippy Grewal</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='gippy_grewal.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-surjit-bindrakhia" data-type="artist"
+                        data-search-term="Surjit Bindrakhia Gangster Pop">
+                        <img src="../images/surjit_bindrakhia.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Surjit Bindrakhia</h3>
+                            <p class="card-subtitle">Gangster Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='surjit_bindrakhia.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-amrit-maan" data-type="artist"
+                        data-search-term="Amrit Maan Punjabi Pop">
+                        <img src="../images/amrit_maan.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Amrit Maan</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='amrit_maan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-jassi-gill" data-type="artist"
+                        data-search-term="Jassi Gill Romantic Pop">
+                        <img src="../images/jassi_gill.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Jassi Gill</h3>
+                            <p class="card-subtitle">Romantic Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='jassi_gill.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-harkirat-sangha" data-type="artist"
+                        data-search-term="Harkirat Sangha Urban Pop">
+                        <img src="../images/harkirat_sangha.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Harkirat Sangha</h3>
+                            <p class="card-subtitle">Urban Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='harkirat_sangha.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-pari-pandher" data-type="artist"
+                        data-search-term="Pari Pandher Folk Punjabi">
+                        <img src="../images/pari_pandher.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Pari Pandher</h3>
+                            <p class="card-subtitle">Folk Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='pari_pandher.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-akhil" data-type="artist" data-search-term="Akhil Romantic Pop">
+                        <img src="../images/akhil.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Akhil</h3>
+                            <p class="card-subtitle">Romantic Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='akhil.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-dulla" data-type="artist" data-search-term="Dulla Punjabi Pop">
+                        <img src="../images/dulla.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Dulla</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='dulla.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-khan-bhaini" data-type="artist" data-search-term="Khan Bhaini Bhangra">
+                        <img src="../images/khan_bhaini.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Khan Bhaini</h3>
+                            <p class="card-subtitle">Bhangra</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='khan_bhaini.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-miss-pooja" data-type="artist"
+                        data-search-term="Miss Pooja Folk Singer">
+                        <img src="../images/miss_pooja.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Miss Pooja</h3>
+                            <p class="card-subtitle">Folk Singer</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='miss_pooja.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-amar-singh-chamkila" data-type="artist"
+                        data-search-term="Amar Singh Chamkila Punjabi Pop">
+                        <img src="../images/chamkila.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Amar Singh Chamkila</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='amar_singh_chamkila.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-yo-yo-honey-singh" data-type="artist"
+                        data-search-term="Yo Yo Honey Singh Hip hop">
+                        <img src="../images/yo_yo.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Yo Yo Honey Singh</h3>
+                            <p class="card-subtitle">Hip hop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='yo_yo_honey_singh.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-koralla-maan" data-type="artist"
+                        data-search-term="Koralla Maan Urban Punjabi">
+                        <img src="../images/koralla_maan.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Koralla Maan</h3>
+                            <p class="card-subtitle">Urban Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='koralla_maan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-baani-sandhu" data-type="artist"
+                        data-search-term="Baani Sandhu Folk Punjabi">
+                        <img src="../images/baani_sandhu.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Baani Sandhu</h3>
+                            <p class="card-subtitle">Folk Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='baani_sandhu.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-himmat-singh" data-type="artist"
+                        data-search-term="Himmat Singh Bhangra">
+                        <img src="../images/himmat_sandhu.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Himmat Singh</h3>
+                            <p class="card-subtitle">Bhangra</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='himmat_singh.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas a-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-pardeep-sran" data-type="artist" data-search-term="Pardeep Sran Pop">
+                        <img src="../images/pardeep_sran.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Pardeep Sran</h3>
+                            <p class="card-subtitle">Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='pardeep_sran.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-g-khan" data-type="artist" data-search-term="G Khan Punjabi Folk">
+                        <img src="../images/g_khan.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">G Khan</h3>
+                            <p class="card-subtitle">Punjabi Folk</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='g_khan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-garry-sandhu" data-type="artist"
+                        data-search-term="Garry Sandhu Punjabi Pop">
+                        <img src="../images/garry_sandhu.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Garry Sandhu</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='garry_sandhu.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-kulwinder-billa" data-type="artist"
+                        data-search-term="Kulwinder Billa Bhangra">
+                        <img src="../images/kulwinder_billa.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Kulwinder Billa</h3>
+                            <p class="card-subtitle">Bhangra</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='kulwinder_billa.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-kanwar-grewal" data-type="artist"
+                        data-search-term="Kanwar Grewal Sufi">
+                        <img src="../images/kanwar_grewal.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Kanwar Grewal</h3>
+                            <p class="card-subtitle">Sufi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='kanwar_grewal.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-maninder-buttar" data-type="artist"
+                        data-search-term="Maninder Buttar Romantic pop">
+                        <img src="../images/maninder_buttar.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Maninder Buttar</h3>
+                            <p class="card-subtitle">Romantic pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='maninder_buttar.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-karan-randhawa" data-type="artist"
+                        data-search-term="Karan Randhawa Gangster Pop">
+                        <img src="../images/karan_randhawa.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Karan Randhawa</h3>
+                            <p class="card-subtitle">Gangster Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='karan_randhawa.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-gurdas-maan" data-type="artist"
+                        data-search-term="Gurdas Maan Folk Legend">
+                        <img src="../images/gurdaas_maan.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Gurdas Maan</h3>
+                            <p class="card-subtitle">Folk Legend</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='gurdas_maan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-mankirat-aulakh" data-type="artist"
+                        data-search-term="Mankirat Aulakh Punjabi pop">
+                        <img src="../images/mankirat_aulakh.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Mankirat Aulakh</h3>
+                            <p class="card-subtitle">Punjabi pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='mankirat_aulakh.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-ninja" data-type="artist" data-search-term="Ninja Hip-Hop">
+                        <img src="../images/ninja.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Ninja</h3>
+                            <p class="card-subtitle">Hip-Hop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='ninja.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-ap-dhillon-full" data-type="artist"
+                        data-search-term="AP Dhillon Punjabi Rapper">
+                        <img src="../images/AP.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">AP Dhillon</h3>
+                            <p class="card-subtitle">Punjabi Rapper</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='ap_dhillon_full.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-shinda" data-type="artist" data-search-term="Shinda Punjabi Rapper">
+                        <img src="../images/shinda.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Shinda</h3>
+                            <p class="card-subtitle">Punjabi Rapper</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='shinda.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-gurinder-gill" data-type="artist"
+                        data-search-term="Gurinder Gill Punjabi Rapper">
+                        <img src="../images/gurinder_gill.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Gurinder Gill</h3>
+                            <p class="card-subtitle">Punjabi Rapper</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='gurinder_gill.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-kaka" data-type="artist" data-search-term="Kaka Pujabi Pop">
+                        <img src="../images/kaka.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Kaka</h3>
+                            <p class="card-subtitle">Pujabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='kaka.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-singaa" data-type="artist" data-search-term="Singaa Punjabi">
+                        <img src="../images/singaa.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Singaa</h3>
+                            <p class="card-subtitle">Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='singaa.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-sukhan-verma" data-type="artist"
+                        data-search-term="Sukhan Verma Romantic">
+                        <img src="../images/sukhan_verma.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Sukhan Verma</h3>
+                            <p class="card-subtitle">Romantic</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='sukhan_verma.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-guru-randhawa" data-type="artist" data-search-term="Guru Randhawa Pop">
+                        <img src="../images/guru_randhawa.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Guru Randhawa</h3>
+                            <p class="card-subtitle">Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='guru_randhawa.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-rajwir-jawanda" data-type="artist"
+                        data-search-term="Rajwir Jawanda Folk Punjabi">
+                        <img src="../images/rajwir_jawanda.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Rajwir Jawanda</h3>
+                            <p class="card-subtitle">Folk Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='rajwir_jawanda.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-the-landers" data-type="artist" data-search-term="The Landers Rapper">
+                        <img src="../images/landers.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">The Landers</h3>
+                            <p class="card-subtitle">Rapper</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='the_landers.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-gurnaam-bhullar" data-type="artist"
+                        data-search-term="Gurnaam Bhullar Punjabi Pop">
+                        <img src="../images/gurnam_bhullar.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Gurnaam Bhullar</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='gurnaam_bhullar.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-guri" data-type="artist" data-search-term="Guri Punjabi Pop">
+                        <img src="../images/guri.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Guri</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='guri.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-veer-sandhu" data-type="artist" data-search-term="Veer Sandhu Punjabi">
+                        <img src="../images/veer_sandhu.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Veer Sandhu</h3>
+                            <p class="card-subtitle">Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='veer_sandhu.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-harnoor" data-type="artist" data-search-term="Harnoor Pop">
+                        <img src="../images/harnoor.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Harnoor</h3>
+                            <p class="card-subtitle">Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='harnoor.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-harvi" data-type="artist" data-search-term="Harvi Pop">
+                        <img src="../images/harvi.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Harvi</h3>
+                            <p class="card-subtitle">Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='harvi.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-goldy" data-type="artist" data-search-term="Goldy Gangster Pop">
+                        <img src="../images/goldy.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Goldy</h3>
+                            <p class="card-subtitle">Gangster Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='goldy.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-tegi-pannu" data-type="artist"
+                        data-search-term="Tegi Pannu Romantic Pop">
+                        <img src="../images/tegi.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Tegi Pannu</h3>
+                            <p class="card-subtitle">Romantic Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='tegi_pannu.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-kaur-b" data-type="artist" data-search-term="Kaur B Punjabi">
+                        <img src="../images/kaur_b.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Kaur B</h3>
+                            <p class="card-subtitle">Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='kaur_b.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-divine" data-type="artist" data-search-term="Divine Gangster Pop">
+                        <img src="../images/divine.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Divine</h3>
+                            <p class="card-subtitle">Gangster Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='divine.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-hardy-sandhu" data-type="artist"
+                        data-search-term="Hardy Sandhu Punjabi Pop">
+                        <img src="../images/hardy.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Hardy Sandhu</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='hardy_sandhu.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-r-nait" data-type="artist" data-search-term="R Nait Folk">
+                        <img src="../images/r_nait.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">R Nait</h3>
+                            <p class="card-subtitle">Folk</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='r_nait.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-sukh-e" data-type="artist" data-search-term="Sukh-E Pop">
+                        <img src="../images/sukhe.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Sukh-E</h3>
+                            <p class="card-subtitle">Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='sukh_e.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-gulab-sidhu" data-type="artist" data-search-term="Gulab Sidhu Pop">
+                        <img src="../images/gulab_sidhu.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Gulab Sidhu</h3>
+                            <p class="card-subtitle">Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='gulab_sidhu.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-mukh-mantri" data-type="artist"
+                        data-search-term="Mukh Mantri Dhamak Bass">
+                        <img src="../images/mukh_mantri.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Mukh Mantri</h3>
+                            <p class="card-subtitle">Dhamak Bass</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='mukh_mantri.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-b-praak" data-type="artist" data-search-term="B Praak Pop">
+                        <img src="../images/bpraak.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">B Praak</h3>
+                            <p class="card-subtitle">Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='b_praak.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-geeta-zaildar" data-type="artist"
+                        data-search-term="Geeta Zaildar Folk">
+                        <img src="../images/geeta.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Geeta Zaildar</h3>
+                            <p class="card-subtitle">Folk</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='geeta_zaildar.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-a-kay" data-type="artist" data-search-term="A-Kay Punjabi Pop">
+                        <img src="../images/akay.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">A-Kay</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='a_kay.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-jimmy-shergill" data-type="artist"
+                        data-search-term="Jimmy Shergill Folk">
+                        <img src="../images/jimmy.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Jimmy Shergill</h3>
+                            <p class="card-subtitle">Folk</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='jimmy_shergill.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-harf-cheema" data-type="artist"
+                        data-search-term="Harf Cheema Punjabi Pop">
+                        <img src="../images/harf.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Harf Cheema</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='harf_cheema.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-bohemia" data-type="artist" data-search-term="Bohemia Rapper">
+                        <img src="../images/bohemia.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Bohemia</h3>
+                            <p class="card-subtitle">Rapper</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='bohemia.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-armaan-gill" data-type="artist" data-search-term="Armaan Gill Pop">
+                        <img src="../images/armaan.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Armaan Gill</h3>
+                            <p class="card-subtitle">Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='armaan_gill.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-arnaaz-gill" data-type="artist" data-search-term="Arnaaz Gill Pop">
+                        <img src="../images/arnaaz_gill.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Arnaaz Gill</h3>
+                            <p class="card-subtitle">Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='arnaaz_gill.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-bunny-johal" data-type="artist" data-search-term="Bunny Johal Punjabi">
+                        <img src="../images/bunny_johal.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Bunny Johal</h3>
+                            <p class="card-subtitle">Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='bunny_johal.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-prabh-gill" data-type="artist" data-search-term="Prabh Gill Hip-Hop">
+                        <img src="../images/prabh_gill.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Prabh Gill</h3>
+                            <p class="card-subtitle">Hip-Hop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='prabh_gill.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-laadi-chahal" data-type="artist"
+                        data-search-term="Laadi Chahal Punjabi Pop">
+                        <img src="../images/laddi.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Laadi Chahal</h3>
+                            <p class="card-subtitle">Punjabi Pop</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='laadi_chahal.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-vicky" data-type="artist" data-search-term="Vicky Folk Punjabi">
+                        <img src="../images/vicky.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Vicky</h3>
+                            <p class="card-subtitle">Folk Punjabi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='vicky.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-nikk" data-type="artist" data-search-term="Nikk Romantic">
+                        <img src="../images/nikk.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Nikk</h3>
+                            <p class="card-subtitle">Romantic</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='nikk.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-inder-chahal" data-type="artist"
+                        data-search-term="Inder Chahal Romantic">
+                        <img src="../images/inder_chahal.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Inder Chahal</h3>
+                            <p class="card-subtitle">Romantic</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='inder_chahal.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-surjit-khan" data-type="artist" data-search-term="Surjit Khan Bhangra">
+                        <img src="../images/surjit_khan.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Surjit Khan</h3>
+                            <p class="card-subtitle">Bhangra</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='surjit_khan.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-preet-harpal" data-type="artist" data-search-term="Preet Harpal Folk">
+                        <img src="../images/preet_harpal.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Preet Harpal</h3>
+                            <p class="card-subtitle">Folk</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='preet_harpal.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card" id="artist-kuldeep-manak" data-type="artist"
+                        data-search-term="Kuldeep Manak Sufi">
+                        <img src="../images/kuldeep_manak.jpg" alt="Artist" class="artist-img" />
+                        <div class="card-content">
+                            <h3 class="card-title">Kuldeep Manak</h3>
+                            <p class="card-subtitle">Sufi</p>
+                        </div>
+                        <div class="card-controls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="play-pause-btn" onclick="window.location.href='kuldeep_manak.html'">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="playback-message" id="playbackMessage" style="display: none;"></div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Tune<span>X</span></h3>
+                    <p>Tunex is your ultimate music destination to discover new artists, stream music, and get tickets
+                        to the hottest events.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="tunex_dashboard.html">Home</a></li>
+                        <li><a href="artists.html">Artists</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Top Genres</h3>
+                    <ul>
+                        <li><a href="#">Pop</a></li>
+                        <li><a href="#">Rock</a></li>
+                        <li><a href="#">Hip Hop</a></li>
+                        <li><a href="#">Electronic</a></li>
+                        <li><a href="#">Jazz</a></li>
+                        <li><a href="#">R&B</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates on new releases, events, and exclusive content.</p>
+                    <div class="newsletter">
+                        <form action="#">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 Tunex Music Portal. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sidebar toggle functionality
+        const sidebarToggleBtn = document.getElementById('sidebar-toggle-btn');
+        const appContainer = document.querySelector('.app-container');
+
+        if (sidebarToggleBtn) {
+            sidebarToggleBtn.addEventListener('click', () => {
+                appContainer.classList.toggle('collapsed');
+            });
+        }
+
+        // Artist filtering logic (Using display style to simulate hiding for now)
+        const featuredBtn = document.getElementById('featured-btn');
+        const allArtistsBtn = document.getElementById('all-artists-btn');
+        const artistCards = document.querySelectorAll('#artist-grid .card');
+
+        function showFeaturedArtists() {
+            featuredBtn.classList.add('active');
+            allArtistsBtn.classList.remove('active');
+            artistCards.forEach((card, index) => {
+                // Assuming first 20 are "featured" based on original structure
+                if (index >= 20) {
+                    card.style.display = 'none';
+                } else {
+                    card.style.display = 'block';
+                }
+            });
+        }
+
+        function showAllArtists() {
+            allArtistsBtn.classList.add('active');
+            featuredBtn.classList.remove('active');
+            artistCards.forEach(card => {
+                card.style.display = 'block';
+            });
+        }
+
+        if (featuredBtn) featuredBtn.addEventListener('click', showFeaturedArtists);
+        if (allArtistsBtn) allArtistsBtn.addEventListener('click', showAllArtists);
+        
+        // Initial call to ensure the correct view is loaded on page load
+        document.addEventListener('DOMContentLoaded', showAllArtists);
+
+        // Note: The original 'toggleFavorite' function was removed as no implementation was provided.
+        // It is harmless as is, but it should be implemented if needed.
+    </script>
+</body>
+</html>

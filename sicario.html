@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tunex - Sicario</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+   <link rel="stylesheet" href="../css/allbumm.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="#" class="logo">
+                    <i class="fas fa-compact-disc"></i>
+                    Tune<span>X</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Menu</div>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="artists.html" class="nav-item">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Charts</span>
+                </a>
+                <a href="artists.html" class="nav-item">
+                    <i class="fas fa-microphone"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="albums.html" class="nav-item active">
+                    <i class="fas fa-record-vinyl"></i>
+                    <span>Albums</span>
+                </a>
+            </nav>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Library</div>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-history"></i>
+                    <span>Recent</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorites</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-download"></i>
+                    <span>Downloads</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <button class="back-button" onclick="window.location.href = 'albums.html'">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+             <section class="album-header">
+    
+    <img src="../images/sicario.jpg" alt="Album Blur" class="album-bg-blur">
+
+
+    <div class="album-cover-container" style="position: relative; z-index: 1; display: flex; align-items: center; height: 100%; justify-content: center;">
+        <div class="album-cover-card">
+            <div class="album-cover-front">
+                <img src="../images/sicario.jpg" alt="Album Cover" />
+            </div>
+            <div class="album-cover-back">
+                <img src="../images/sicario.jpg" alt="Album Cover Back" />
+            </div>
+        </div>
+    </div>
+
+    <div class="album-info" style="position: relative; z-index: 1; text-align: center; margin-top: 20px;">
+        <h1 class="album-info-title">Sicario</h1>
+        <p class="album-artist-details">Album by <a href="#">Shubh</a></p>
+        <p class="album-meta-info">2024 • 10 songs</p>
+    </div>
+</section>
+
+
+            
+            <section class="album-actions">
+                <button class="play-btn" onclick="playFirstTrack()">
+                    <i class="fas fa-play"></i>
+                </button>
+            </section>
+
+           <section class="songs-section">
+    <h2 class="songs-section-title">Songs</h2>
+    <ul class="song-list">
+        <li class="song-item">
+            <span class="song-number">1</span>
+            <div class="song-controls">
+                <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                    <i class="fas fa-play play-icon"></i>
+                    <i class="fas fa-pause pause-icon"></i>
+                </button>
+            </div>
+            <div class="song-album-cover">
+                <img src="../images/sicario.jpg" alt="Album Cover" />
+            </div>
+            <div class="song-info">
+                <span class="song-title">Buckle Up</span>
+            </div>
+            <div class="song-duration">2:48</div>
+            <audio src="../songs/buckle_up.mp3"></audio>
+        </li>
+        <li class="song-item">
+            <span class="song-number">2</span>
+            <div class="song-controls">
+                <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                    <i class="fas fa-play play-icon"></i>
+                    <i class="fas fa-pause pause-icon"></i>
+                </button>
+            </div>
+            <div class="song-album-cover">
+                <img src="../images/sicario.jpg" alt="Album Cover" />
+            </div>
+            <div class="song-info">
+                <span class="song-title">Aura</span>
+            </div>
+            <div class="song-duration">3:05</div>
+            <audio src="../songs/aura.mp3"></audio>
+        </li>
+        <li class="song-item">
+            <span class="song-number">3</span>
+            <div class="song-controls">
+                <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                    <i class="fas fa-play play-icon"></i>
+                    <i class="fas fa-pause pause-icon"></i>
+                </button>
+            </div>
+            <div class="song-album-cover">
+                <img src="../images/sicario.jpg" alt="Album Cover" />
+            </div>
+            <div class="song-info">
+                <span class="song-title">Reckless</span>
+            </div>
+            <div class="song-duration">2:55</div>
+            <audio src="../songs/reckless.mp3"></audio>
+        </li>
+        <li class="song-item">
+            <span class="song-number">4</span>
+            <div class="song-controls">
+                <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                    <i class="fas fa-play play-icon"></i>
+                    <i class="fas fa-pause pause-icon"></i>
+                </button>
+            </div>
+            <div class="song-album-cover">
+                <img src="../images/sicario.jpg" alt="Album Cover" />
+            </div>
+            <div class="song-info">
+                <span class="song-title">Bars</span>
+            </div>
+            <div class="song-duration">3:12</div>
+            <audio src="../songs/bars.mp3"></audio>
+        </li>
+        <li class="song-item">
+            <span class="song-number">5</span>
+            <div class="song-controls">
+                <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                    <i class="fas fa-play play-icon"></i>
+                    <i class="fas fa-pause pause-icon"></i>
+                </button>
+            </div>
+            <div class="song-album-cover">
+                <img src="../images/sicario.jpg" alt="Album Cover" />
+            </div>
+            <div class="song-info">
+                <span class="song-title">Carti</span>
+            </div>
+            <div class="song-duration">2:40</div>
+            <audio src="../songs/carti.mp3"></audio>
+        </li>
+        <li class="song-item">
+            <span class="song-number">6</span>
+            <div class="song-controls">
+                <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                    <i class="fas fa-play play-icon"></i>
+                    <i class="fas fa-pause pause-icon"></i>
+                </button>
+            </div>
+            <div class="song-album-cover">
+                <img src="../images/sicario.jpg" alt="Album Cover" />
+            </div>
+            <div class="song-info">
+                <span class="song-title">Fell For You</span>
+            </div>
+            <div class="song-duration">3:18</div>
+            <audio src="../songs/fell_for_you.mp3"></audio>
+        </li>
+        <li class="song-item">
+            <span class="song-number">7</span>
+            <div class="song-controls">
+                <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                    <i class="fas fa-play play-icon"></i>
+                    <i class="fas fa-pause pause-icon"></i>
+                </button>
+            </div>
+            <div class="song-album-cover">
+                <img src="../images/sicario.jpg" alt="Album Cover" />
+            </div>
+            <div class="song-info">
+                <span class="song-title">In Love</span>
+            </div>
+            <div class="song-duration">3:00</div>
+            <audio src="../songs/in_love.mp3"></audio>
+        </li>
+        <li class="song-item">
+            <span class="song-number">8</span>
+            <div class="song-controls">
+                <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                    <i class="fas fa-play play-icon"></i>
+                    <i class="fas fa-pause pause-icon"></i>
+                </button>
+            </div>
+            <div class="song-album-cover">
+                <img src="../images/sicario.jpg" alt="Album Cover" />
+            </div>
+            <div class="song-info">
+                <span class="song-title">Routine</span>
+            </div>
+            <div class="song-duration">2:50</div>
+            <audio src="../songs/routine.mp3"></audio>
+        </li>
+        <li class="song-item">
+            <span class="song-number">9</span>
+            <div class="song-controls">
+                <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                    <i class="fas fa-play play-icon"></i>
+                    <i class="fas fa-pause pause-icon"></i>
+                </button>
+            </div>
+            <div class="song-album-cover">
+                <img src="../images/sicario.jpg" alt="Album Cover" />
+            </div>
+            <div class="song-info">
+                <span class="song-title">Ruger</span>
+            </div>
+            <div class="song-duration">3:02</div>
+            <audio src="../songs/ruger.mp3"></audio>
+        </li>
+        <li class="song-item">
+            <span class="song-number">10</span>
+            <div class="song-controls">
+                <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                    <i class="fas fa-play play-icon"></i>
+                    <i class="fas fa-pause pause-icon"></i>
+                </button>
+            </div>
+            <div class="song-album-cover">
+                <img src="../images/sicario.jpg" alt="Album Cover" />
+            </div>
+            <div class="song-info">
+                <span class="song-title">Top G</span>
+            </div>
+            <div class="song-duration">2:58</div>
+            <audio src="../songs/top_g.mp3"></audio>
+        </li>
+    </ul>
+</section>
+
+        </main>
+    </div>
+
+    <div class="playback-message" id="playbackMessage"></div>
+    
+    <div class="now-playing-bar" id="nowPlayingBar">
+        
+        <div class="now-playing-left">
+            <img src="" alt="Album Cover" class="now-playing-cover" id="nowPlayingCover">
+            <div class="now-playing-info">
+                <span class="now-playing-title" id="nowPlayingTitle">No song playing</span>
+                <span class="now-playing-artist" id="nowPlayingArtist">...</span>
+            </div>
+        </div>
+        
+        <div class="now-playing-center">
+            <div class="player-controls">
+                <button class="player-control-btn small">
+                    <i class="fas fa-random"></i> </button>
+                <button class="player-control-btn" id="prevBtn">
+                    <i class="fas fa-step-backward"></i> </button>
+                <button class="player-control-btn main" id="mainPlayPauseBtn">
+                    <i class="fas fa-play" id="mainPlayIcon"></i>
+                    <i class="fas fa-pause" id="mainPauseIcon"></i>
+                </button>
+                <button class="player-control-btn" id="nextBtn">
+                    <i class="fas fa-step-forward"></i> </button>
+                <button class="player-control-btn small" id="repeatBtn">
+                    <i class="fas fa-redo"></i> </button>
+            </div>
+            
+            <div class="progress-bar-container">
+                <span class="time-display" id="currentTime">0:00</span>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-bar-inner" id="progressBarInner"></div>
+                </div>
+                <span class="time-display" id="totalTime">0:00</span>
+            </div>
+        </div>
+        
+        <div class="now-playing-right">
+             </div>
+    </div>
+    
+    
+     <script src="../js/player.js"></script>
+</body>
+</html>
+

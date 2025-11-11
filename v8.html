@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tunex - V8</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+ <link rel="stylesheet" href="../css/allbumm.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="#" class="logo">
+                    <i class="fas fa-compact-disc"></i>
+                    Tune<span>X</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Menu</div>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="artists.html" class="nav-item">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Charts</span>
+                </a>
+                <a href="artists.html" class="nav-item">
+                    <i class="fas fa-microphone"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="albums.html" class="nav-item active">
+                    <i class="fas fa-record-vinyl"></i>
+                    <span>Albums</span>
+                </a>
+            </nav>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Library</div>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-history"></i>
+                    <span>Recent</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorites</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-download"></i>
+                    <span>Downloads</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <button class="back-button" onclick="window.location.href = 'albums.html'">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+     <section class="album-header">
+   
+    <img src="../images/v8.jpg" alt="Album Blur" class="album-bg-blur">
+
+
+    <div class="album-cover-container" style="position: relative; z-index: 1;">
+        <div class="album-cover-card">
+            <div class="album-cover-front">
+                <img src="../images/v8.jpg" alt="Album Cover" />
+            </div>
+            <div class="album-cover-back">
+                <img src="../images/v8.jpg" alt="Jass Bajwa" />
+            </div>
+        </div>
+    </div>
+    <div class="album-info" style="position: relative; z-index: 1;">
+        <h1 class="album-info-title">V8</h1>
+        <p class="album-artist-details">Album by <a href="#">Jass Bajwa</a></p>
+        <p class="album-meta-info">2025 • 8 songs</p>
+    </div>
+</section>
+
+            
+            <section class="album-actions">
+                <button class="play-btn" onclick="playFirstTrack()">
+                    <i class="fas fa-play"></i>
+                </button>
+            </section>
+
+            <section class="songs-section">
+                <h2 class="songs-section-title">Songs</h2>
+                <ul class="song-list">
+                    <li class="song-item">
+                        <span class="song-number">1</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/v8.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Join Us</span>
+                        </div>
+                        <div class="song-duration">2:19</div>
+                        <audio src="../songs/join_us.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">2</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/v8.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Call Me</span>
+                        </div>
+                        <div class="song-duration">2:51</div>
+                        <audio src="../songs/call_me.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">3</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/v8.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Map</span>
+                        </div>
+                        <div class="song-duration">2:57</div>
+                        <audio src="../songs/map.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">4</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/v8.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Why Fear</span>
+                        </div>
+                        <div class="song-duration">3:10</div>
+                        <audio src="../songs/why_fear.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">5</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/v8.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Perfect</span>
+                        </div>
+                        <div class="song-duration">2:45</div>
+                        <audio src="../songs/perfect.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">6</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/v8.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">25/26</span>
+                        </div>
+                        <div class="song-duration">2:49</div>
+                        <audio src="../songs/25_26.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">7</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/v8.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Stud Farm</span>
+                        </div>
+                        <div class="song-duration">2:38</div>
+                        <audio src="../songs/stud_farm.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">8</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/v8.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Like Us</span>
+                        </div>
+                        <div class="song-duration">2:56</div>
+                        <audio src="../songs/like_us.mp3"></audio>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+     <div class="playback-message" id="playbackMessage"></div>
+    
+    <div class="now-playing-bar" id="nowPlayingBar">
+        
+        <div class="now-playing-left">
+            <img src="" alt="Album Cover" class="now-playing-cover" id="nowPlayingCover">
+            <div class="now-playing-info">
+                <span class="now-playing-title" id="nowPlayingTitle">No song playing</span>
+                <span class="now-playing-artist" id="nowPlayingArtist">...</span>
+            </div>
+        </div>
+        
+        <div class="now-playing-center">
+            <div class="player-controls">
+                <button class="player-control-btn small">
+                    <i class="fas fa-random"></i> </button>
+                <button class="player-control-btn" id="prevBtn">
+                    <i class="fas fa-step-backward"></i> </button>
+                <button class="player-control-btn main" id="mainPlayPauseBtn">
+                    <i class="fas fa-play" id="mainPlayIcon"></i>
+                    <i class="fas fa-pause" id="mainPauseIcon"></i>
+                </button>
+                <button class="player-control-btn" id="nextBtn">
+                    <i class="fas fa-step-forward"></i> </button>
+                <button class="player-control-btn small" id="repeatBtn">
+                    <i class="fas fa-redo"></i> </button>
+            </div>
+            
+            <div class="progress-bar-container">
+                <span class="time-display" id="currentTime">0:00</span>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-bar-inner" id="progressBarInner"></div>
+                </div>
+                <span class="time-display" id="totalTime">0:00</span>
+            </div>
+        </div>
+        
+        <div class="now-playing-right">
+            </div>
+    </div>
+    
+    
+    <script src="../js/player.js"></script>
+</body>
+</html>
+
+    
+</body>
+</html>

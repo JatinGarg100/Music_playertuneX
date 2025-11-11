@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tunex - A for Arjan 2</title>
+    
+    <link rel="stylesheet" href="../css/allbumm.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ---------- Base Styles ---------- */
+        
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="#" class="logo">
+                    <i class="fas fa-compact-disc"></i>
+                    Tune<span>X</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Menu</div>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="artists.html" class="nav-item">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Charts</span>
+                </a>
+                <a href="artists.html" class="nav-item">
+                    <i class="fas fa-microphone"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="albums.html" class="nav-item active">
+                    <i class="fas fa-record-vinyl"></i>
+                    <span>Albums</span>
+                </a>
+            </nav>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Library</div>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-history"></i>
+                    <span>Recent</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorites</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-download"></i>
+                    <span>Downloads</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <button class="back-button" onclick="window.location.href = 'albums.html'">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <section class="album-header">
+                <div class="album-cover-container">
+                    <div class="album-cover-card">
+                        <div class="album-cover-front">
+                            <img src="../images/A_for_Arjan2.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="album-cover-back">
+                            <img src="../images/A_for_Arjan2.jpg" alt="Arjan Dhillon" />
+                        </div>
+                    </div>
+                </div>
+                <div class="album-info">
+                    <h1 class="album-info-title">A for Arjan 2</h1>
+                    <p class="album-artist-details">Album by <a href="#">Arjan Dhillon</a></p>
+                    <p class="album-meta-info">2025 • 18 songs</p>
+                </div>
+            </section>
+            
+            <section class="album-actions">
+                <button class="play-btn" onclick="playFirstTrack()">
+                    <i class="fas fa-play"></i>
+                </button>
+            </section>
+
+            <section class="songs-section">
+                <h2 class="songs-section-title">Songs</h2>
+                <ul class="song-list">
+                    <li class="song-item">
+                        <span class="song-number">1</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/A_for_Arjan2.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">OK Hoye Paye Haan</span>
+                        </div>
+                        <div class="song-duration">2:09</div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">2</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/A_for_Arjan2.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Greatest</span>
+                        </div>
+                        <div class="song-duration">2:58</div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">3</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/A_for_Arjan2.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">All Good</span>
+                        </div>
+                        <div class="song-duration">3:15</div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">4</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/A_for_Arjan2.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Dil Diya Gallan</span>
+                        </div>
+                        <div class="song-duration">2:45</div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">5</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/A_for_Arjan2.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Pind De Munde</span>
+                        </div>
+                        <div class="song-duration">3:30</div>
+                        <audio src="../images/A_for_Arjan2.jpg"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">6</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/A_for_Arjan2.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Awaaz</span>
+                        </div>
+                        <div class="song-duration">4:01</div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">7</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/A_for_Arjan2.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Saroor</span>
+                        </div>
+                        <div class="song-duration">2:55</div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">8</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/A_for_Arjan2.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Dillan</span>
+                        </div>
+                        <div class="song-duration">3:10</div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">9</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/A_for_Arjan2.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Yaar Anmulle</span>
+                        </div>
+                        <div class="song-duration">3:45</div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">10</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/A_for_Arjan2.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Tere Piche</span>
+                        </div>
+                        <div class="song-duration">3:05</div>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3"></audio>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <div class="playback-message" id="playbackMessage"></div>
+    
+    <div class="now-playing-bar" id="nowPlayingBar">
+        
+        <div class="now-playing-left">
+            <img src="" alt="Album Cover" class="now-playing-cover" id="nowPlayingCover">
+            <div class="now-playing-info">
+                <span class="now-playing-title" id="nowPlayingTitle">No song playing</span>
+                <span class="now-playing-artist" id="nowPlayingArtist">...</span>
+            </div>
+        </div>
+        
+        <div class="now-playing-center">
+            <div class="player-controls">
+                <button class="player-control-btn small">
+                    <i class="fas fa-random"></i> </button>
+                <button class="player-control-btn" id="prevBtn">
+                    <i class="fas fa-step-backward"></i> </button>
+                <button class="player-control-btn main" id="mainPlayPauseBtn">
+                    <i class="fas fa-play" id="mainPlayIcon"></i>
+                    <i class="fas fa-pause" id="mainPauseIcon"></i>
+                </button>
+                <button class="player-control-btn" id="nextBtn">
+                    <i class="fas fa-step-forward"></i> </button>
+                <button class="player-control-btn small" id="repeatBtn">
+                    <i class="fas fa-redo"></i> </button>
+            </div>
+            
+            <div class="progress-bar-container">
+                <span class="time-display" id="currentTime">0:00</span>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-bar-inner" id="progressBarInner"></div>
+                </div>
+                <span class="time-display" id="totalTime">0:00</span>
+            </div>
+        </div>
+        
+        <div class="now-playing-right">
+            </div>
+    </div>
+    
+    
+    <script>
+        let currentAudio = null;
+        let currentSongItem = null; // Keep track of the <li> element
+        let playbackTimeout = null;
+        
+        // --- Get Elements ---
+        const playbackMessage = document.getElementById('playbackMessage');
+        
+        // Now Playing Bar Elements
+        const nowPlayingBar = document.getElementById('nowPlayingBar');
+        const nowPlayingCover = document.getElementById('nowPlayingCover');
+        const nowPlayingTitle = document.getElementById('nowPlayingTitle');
+        const nowPlayingArtist = document.getElementById('nowPlayingArtist');
+        const mainPlayPauseBtn = document.getElementById('mainPlayPauseBtn');
+        const mainPlayIcon = document.getElementById('mainPlayIcon');
+        const mainPauseIcon = document.getElementById('mainPauseIcon');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const currentTime = document.getElementById('currentTime');
+        const totalTime = document.getElementById('totalTime');
+        const progressBar = document.getElementById('progressBar');
+        const progressBarInner = document.getElementById('progressBarInner');
+        const repeatBtn = document.getElementById('repeatBtn');
+
+        // --- Main Function to Play Audio ---
+        function playAudio(item) {
+            if (!item) return; // Stop if no item is provided
+            
+            const audio = item.querySelector('audio');
+            const title = item.querySelector('.song-title').textContent;
+
+            if (currentAudio && currentAudio === audio) {
+                // --- Clicked the SAME song that is playing: PAUSE it ---
+                audio.pause();
+                item.classList.remove('playing');
+                updateMainPlayPauseButton(false); // Show play icon
+                hidePlaybackMessage();
+                currentAudio = null; 
+            } else {
+                // --- Clicked a NEW song (or a paused song) ---
+                if (currentAudio) {
+                    // Stop the old song and remove its listeners
+                    currentAudio.pause();
+                    currentAudio.currentTime = 0;
+                    currentAudio.removeEventListener('timeupdate', updateProgress);
+                    currentAudio.removeEventListener('loadedmetadata', setSongDurationFromMetadata);
+                    if (currentSongItem) {
+                        currentSongItem.classList.remove('playing');
+                    }
+                }
+                
+                // Play the new song
+                audio.play().catch(e => console.error("Error playing audio:", e));
+                currentAudio = audio;
+                currentSongItem = item;
+                item.classList.add('playing');
+                
+                // Update the main bar
+                updateNowPlayingInfo(item);
+                updateMainPlayPauseButton(true); // Show pause icon
+                
+                // Show the toast message
+                showPlaybackMessage(`Now playing: "${title}"`);
+
+                // --- NEW: Add event listeners for progress bar ---
+                audio.addEventListener('timeupdate', updateProgress);
+                // Use 'loadedmetadata' to set the ACCURATE duration for calculations
+                audio.addEventListener('loadedmetadata', setSongDurationFromMetadata); 
+                audio.onended = playNextTrack; // Play next song when this one finishes
+            }
+        }
+
+        // --- Function for the BIG Play button in the header ---
+        function playFirstTrack() {
+            const firstTrack = document.querySelector('.song-item');
+            if (firstTrack) {
+                playAudio(firstTrack);
+            }
+        }
+        
+        // --- Function for the MAIN Play/Pause button in the bar ---
+        function toggleMainPlay() {
+            if (!currentAudio && currentSongItem) {
+                // --- A song was paused: RESUME it ---
+                playAudio(currentSongItem);
+            } else if (!currentAudio && !currentSongItem) {
+                // --- Nothing is loaded: Play the FIRST track ---
+                playFirstTrack();
+            } else if (currentAudio) {
+                 // --- A song is actively playing: PAUSE it ---
+                currentAudio.pause();
+                currentSongItem.classList.remove('playing');
+                updateMainPlayPauseButton(false);
+                currentAudio = null;
+            }
+        }
+        
+        // --- NEW: Next/Previous Track Functions ---
+        function playNextTrack() {
+            if (!currentSongItem) return;
+            const nextItem = currentSongItem.nextElementSibling;
+            if (nextItem && nextItem.classList.contains('song-item')) {
+                playAudio(nextItem);
+            } else {
+                // Optional: Go back to first song
+                const firstTrack = document.querySelector('.song-item');
+                playAudio(firstTrack);
+            }
+        }
+
+        function playPrevTrack() {
+            if (!currentSongItem) return;
+            
+            if (currentAudio && currentAudio.currentTime > 3) {
+                currentAudio.currentTime = 0;
+                currentAudio.play(); // BUG FIX
+                return;
+            }
+            
+            // Otherwise, go to the previous song
+            const prevItem = currentSongItem.previousElementSibling;
+            if (prevItem && prevItem.classList.contains('song-item')) {
+                playAudio(prevItem);
+            }
+        }
+        
+        function repeatSong() {
+            if (currentSongItem) {
+                const audio = currentSongItem.querySelector('audio');
+                audio.currentTime = 0;
+                
+                // We must ensure it plays, regardless of current state
+                if (currentAudio) {
+                    // If it was already playing, just let it continue from 0
+                    audio.play();
+                } else {
+                    // If it was paused, call playAudio to handle UI updates
+                    playAudio(currentSongItem);
+                }
+            }
+        }
+
+        // --- NEW: Progress Bar and Time Functions ---
+        function updateProgress() {
+            if (!currentAudio) return;
+            const { duration, currentTime: time } = currentAudio;
+            if (duration) { // Check if duration is available
+                const progressPercent = (time / duration) * 100;
+                progressBarInner.style.width = `${progressPercent}%`;
+                currentTime.textContent = formatTime(time);
+            }
+        }
+
+        // This function sets the accurate duration once the audio file metadata loads
+        function setSongDurationFromMetadata() {
+            if (!currentAudio) return;
+            totalTime.textContent = formatTime(currentAudio.duration);
+        }
+
+        function seek(e) {
+            if (!currentAudio || !currentAudio.duration) return;
+            const width = progressBar.clientWidth;
+            const clickX = e.offsetX;
+            const duration = currentAudio.duration;
+            currentAudio.currentTime = (clickX / width) * duration;
+        }
+        
+        // --- NEW: Helper function to format time (e.g., 129 -> "2:09") ---
+        function formatTime(seconds) {
+            if (isNaN(seconds)) {
+                return "0:00"; // Handle cases where duration isn't ready
+            }
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        // --- Helper function to update the bar's info ---
+        function updateNowPlayingInfo(item) {
+            const title = item.querySelector('.song-title').textContent;
+            const coverSrc = item.querySelector('.song-album-cover img').src;
+            const artist = document.querySelector('.album-artist-details a').textContent; 
+            const durationText = item.querySelector('.song-duration').textContent;
+
+            nowPlayingCover.src = coverSrc;
+            nowPlayingTitle.textContent = title;
+            nowPlayingArtist.textContent = artist;
+            
+            // Set the totalTime text immediately from the HTML list
+            totalTime.textContent = durationText; 
+            currentTime.textContent = "0:00"; // Reset current time
+            progressBarInner.style.width = "0%"; // Reset progress bar
+            
+            nowPlayingBar.classList.add('active'); // Show the bar
+        }
+
+        // --- Helper function to toggle the main bar's button icon ---
+        function updateMainPlayPauseButton(isPlaying) {
+            if (isPlaying) {
+                mainPlayIcon.style.display = 'none';
+                mainPauseIcon.style.display = 'block';
+            } else {
+                mainPlayIcon.style.display = 'block';
+                mainPauseIcon.style.display = 'none';
+            }
+        }
+
+        // --- Attach Listeners ---
+        mainPlayPauseBtn.addEventListener('click', toggleMainPlay);
+        nextBtn.addEventListener('click', playNextTrack);
+        prevBtn.addEventListener('click', playPrevTrack);
+        progressBar.addEventListener('click', seek);
+        repeatBtn.addEventListener('click', repeatSong);
+
+        // --- Toast Message Functions (Unchanged) ---
+        function showPlaybackMessage(message) {
+            clearTimeout(playbackTimeout);
+            playbackMessage.textContent = message;
+            playbackMessage.style.display = 'block';
+            playbackMessage.style.opacity = '1';
+            playbackTimeout = setTimeout(() => {
+                hidePlaybackMessage();
+            }, 3000);
+        }
+
+        function hidePlaybackMessage() {
+            playbackMessage.style.opacity = '0';
+            setTimeout(() => {
+                playbackMessage.style.display = 'none';
+            }, 500);
+        }
+    </script>
+</body>
+</html>

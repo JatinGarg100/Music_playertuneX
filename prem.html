@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tunex - Prem Dhillon</title>
+    <link rel="stylesheet" href="../css/singers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="#" class="logo">
+                    <i class="fas fa-compact-disc"></i>
+                    Tune<span>X</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Menu</div>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-compact-disc"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Charts</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-microphone"></i>
+                    <span>Artists</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-record-vinyl"></i>
+                    <span>Albums</span>
+                </a>
+            </nav>
+            <nav class="sidebar-nav">
+                <div class="nav-title">Library</div>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-history"></i>
+                    <span>Recent</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorites</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-download"></i>
+                    <span>Downloads</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <button class="back-button" onclick="window.location.href = 'artists.html'">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <section class="artist-header">
+                <div class="artist-img-container">
+                    <img src="../images/prem_dhillon.jpg" alt="Arjan Dhillon" />
+                </div>
+                <div class="artist-info">
+                    <div class="verified-artist">
+                        <i class="fas fa-check-circle"></i> Verified Artist
+                    </div>
+                    <h1 class="artist-name">Prem Dhillon</h1>
+                    <p class="monthly-listeners">3,140,453 monthly listeners</p>
+                </div>
+            </section>
+            
+            <section class="artist-actions">
+                <button class="play-btn" onclick="playPopularTrack()">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="following-btn">Following</button>
+                <button class="more-options-btn">...</button>
+            </section>
+
+            <section class="popular-tracks">
+                <h2 class="popular-tracks-title">Popular</h2>
+                <ul class="song-list">
+                    <li class="song-item">
+                        <span class="song-number">1</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/astarr.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Astarr</span>
+                        </div>
+                        <div class="song-listeners">21,383,506</div>
+                        <div class="song-duration">2:09</div>
+                        <audio src="../songs/astarr.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">2</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/busy_doin_nothin.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Busy Doin Nothin</span>
+                        </div>
+                        <div class="song-listeners">34,587,060</div>
+                        <div class="song-duration">2:58</div>
+                        <audio src="../songs/busy_doin_nothin.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">3</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/rollin_loud.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Rollin Loud</span>
+                        </div>
+                        <div class="song-listeners">12,123,456</div>
+                        <div class="song-duration">2:25</div>
+                        <audio src="../songs/rollin_loud.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">4</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/backlash.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Backlash</span>
+                        </div>
+                        <div class="song-listeners">9,876,543</div>
+                        <div class="song-duration">2:45</div>
+                        <audio src="../songs/backlash.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">5</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/bhau.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Bhau</span>
+                        </div>
+                        <div class="song-listeners">8,543,210</div>
+                        <div class="song-duration">3:30</div>
+                        <audio src="../songs/bhau.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">6</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/love_hurts.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Love Hurts</span>
+                        </div>
+                        <div class="song-listeners">7,654,321</div>
+                        <div class="song-duration">4:01</div>
+                        <audio src="../songs/love_hurts.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">7</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/badboy.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Badboy</span>
+                        </div>
+                        <div class="song-listeners">6,543,210</div>
+                        <div class="song-duration">2:55</div>
+                        <audio src="../songs/badboy.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">8</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/apsara.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Apsara</span>
+                        </div>
+                        <div class="song-listeners">5,432,109</div>
+                        <div class="song-duration">3:10</div>
+                        <audio src="../songs/apsara.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">9</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/badberry.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Badberry</span>
+                        </div>
+                        <div class="song-listeners">4,321,098</div>
+                        <div class="song-duration">3:45</div>
+                        <audio src="../songs/badberry.mp3"></audio>
+                    </li>
+                    <li class="song-item">
+                        <span class="song-number">10</span>
+                        <div class="song-controls">
+                            <button class="song-play-pause-btn" onclick="playAudio(this.closest('.song-item'))">
+                                <i class="fas fa-play play-icon"></i>
+                                <i class="fas fa-pause pause-icon"></i>
+                            </button>
+                        </div>
+                        <div class="song-album-cover">
+                            <img src="../images/moonbound.jpg" alt="Album Cover" />
+                        </div>
+                        <div class="song-info">
+                            <span class="song-title">Moonbound</span>
+                        </div>
+                        <div class="song-listeners">3,210,987</div>
+                        <div class="song-duration">3:05</div>
+                        <audio src="../songs/moonbound.mp3"></audio>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="albums-section">
+                <h2 class="popular-tracks-title">Albums</h2>
+                <div class="albums-grid">
+                    <div class="album-card">
+                        <img src="../images/limitless.jpg" alt="Album Cover" class="album-img-circle" />
+                        <div class="card-content">
+                            <h3 class="card-title">Limitless</h3>
+                            <p class="card-subtitle">Prem Dhillon</p>
+                        </div>
+                        <button class="play-pause-btn-circle" onclick="playAudio(this.closest('.album-card'))">
+                            <i class="fas fa-play play-icon"></i>
+                            <i class="fas fa-pause pause-icon"></i>
+                        </button>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3"></audio>
+                    </div>
+                    <div class="album-card">
+                        <img src="../images/no_lookin_back.jpg" alt="Album Cover" class="album-img-circle" />
+                        <div class="card-content">
+                            <h3 class="card-title">No Lookin Back</h3>
+                            <p class="card-subtitle">Prem Dhillon</p>
+                        </div>
+                        <button class="play-pause-btn-circle" onclick="playAudio(this.closest('.album-card'))">
+                            <i class="fas fa-play play-icon"></i>
+                            <i class="fas fa-pause pause-icon"></i>
+                        </button>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3"></audio>
+                    </div>
+                    <div class="album-card">
+                        <img src="../images/4_da_gang1.jpg" alt="Album Cover" class="album-img-circle" />
+                        <div class="card-content">
+                            <h3 class="card-title">4 Da Gang</h3>
+                            <p class="card-subtitle">Prem Dhillon</p>
+                        </div>
+                        <button class="play-pause-btn-circle" onclick="playAudio(this.closest('.album-card'))">
+                            <i class="fas fa-play play-icon"></i>
+                            <i class="fas fa-pause pause-icon"></i>
+                        </button>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3"></audio>
+                    </div>
+                    <div class="album-card">
+                        <img src="../images/unscripted.jpg" alt="Album Cover" class="album-img-circle" />
+                        <div class="card-content">
+                            <h3 class="card-title">Unscripted</h3>
+                            <p class="card-subtitle">Prem Dhillon</p>
+                        </div>
+                        <button class="play-pause-btn-circle" onclick="playAudio(this.closest('.album-card'))">
+                            <i class="fas fa-play play-icon"></i>
+                            <i class="fas fa-pause pause-icon"></i>
+                        </button>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3"></audio>
+                    </div>
+                    <div class="album-card">
+                        <img src="../images/archives.jpg" alt="Album Cover" class="album-img-circle" />
+                        <div class="card-content">
+                            <h3 class="card-title">Archives</h3>
+                            <p class="card-subtitle">Prem Dhillon</p>
+                        </div>
+                        <button class="play-pause-btn-circle" onclick="playAudio(this.closest('.album-card'))">
+                            <i class="fas fa-play play-icon"></i>
+                            <i class="fas fa-pause pause-icon"></i>
+                        </button>
+                        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3"></audio>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="playback-message" id="playbackMessage"></div>
+
+    <div class="now-playing-bar" id="nowPlayingBar">
+        <div class="now-playing-left">
+            <img src="" alt="Album Cover" class="now-playing-cover" id="nowPlayingCover">
+            <div class="now-playing-info">
+                <span class="now-playing-title" id="nowPlayingTitle">No song playing</span>
+                <span class="now-playing-artist" id="nowPlayingArtist">Arjan Dhillon</span>
+            </div>
+        </div>
+        
+        <div class="now-playing-center">
+            <div class="player-controls">
+                <button class="player-control-btn small" id="shuffleBtn"><i class="fas fa-random"></i></button>
+                <button class="player-control-btn" id="prevBtn"><i class="fas fa-step-backward"></i></button>
+                <button class="player-control-btn main" id="mainPlayPauseBtn">
+                    <i class="fas fa-play" id="mainPlayIcon"></i>
+                    <i class="fas fa-pause" id="mainPauseIcon"></i>
+                </button>
+                <button class="player-control-btn" id="nextBtn"><i class="fas fa-step-forward"></i></button>
+                <button class="player-control-btn small" id="repeatBtn"><i class="fas fa-redo"></i></button>
+            </div>
+            
+            <div class="progress-bar-container">
+                <span class="time-display" id="currentTime">0:00</span>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-bar-inner" id="progressBarInner"></div>
+                </div>
+                <span class="time-display" id="totalTime">0:00</span>
+            </div>
+        </div>
+        
+        <div class="now-playing-right">
+             <!-- Volume controls can be added here -->
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const songItems = document.querySelectorAll('.song-item');
+            const nowPlayingBar = document.getElementById('nowPlayingBar');
+            const nowPlayingCover = document.getElementById('nowPlayingCover');
+            const nowPlayingTitle = document.getElementById('nowPlayingTitle');
+            const mainPlayPauseBtn = document.getElementById('mainPlayPauseBtn');
+            const mainPlayIcon = document.getElementById('mainPlayIcon');
+            const mainPauseIcon = document.getElementById('mainPauseIcon');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const repeatBtn = document.getElementById('repeatBtn');
+            const currentTimeEl = document.getElementById('currentTime');
+            const totalTimeEl = document.getElementById('totalTime');
+            const progressBar = document.getElementById('progressBar');
+            const progressBarInner = document.getElementById('progressBarInner');
+
+            let currentAudio = null;
+            let currentTrackIndex = -1;
+            let isRepeating = false;
+            
+            const tracks = Array.from(songItems);
+
+            function playTrack(index) {
+                if (index < 0 || index >= tracks.length) return;
+
+                // Stop currently playing song if any
+                if (currentAudio) {
+                    currentAudio.pause();
+                    const oldItem = tracks[currentTrackIndex];
+                    if (oldItem) oldItem.classList.remove('playing');
+                }
+
+                currentTrackIndex = index;
+                const songItem = tracks[currentTrackIndex];
+                const audio = songItem.querySelector('audio');
+                const cover = songItem.querySelector('.song-album-cover img').src;
+                const title = songItem.querySelector('.song-title').textContent;
+
+                audio.currentTime = 0;
+                audio.play();
+                
+                nowPlayingBar.style.display = 'grid'; // Make the bar visible
+                nowPlayingCover.src = cover;
+                nowPlayingTitle.textContent = title;
+                mainPlayIcon.style.display = 'none';
+                mainPauseIcon.style.display = 'block';
+                songItem.classList.add('playing');
+                
+                currentAudio = audio;
+
+                currentAudio.addEventListener('timeupdate', updateProgress);
+                currentAudio.addEventListener('loadedmetadata', () => {
+                    totalTimeEl.textContent = formatTime(currentAudio.duration);
+                });
+                currentAudio.addEventListener('ended', playNextTrack);
+            }
+            
+            function togglePlayPause() {
+                if (currentAudio) {
+                    if (currentAudio.paused) {
+                        currentAudio.play();
+                        mainPlayIcon.style.display = 'none';
+                        mainPauseIcon.style.display = 'block';
+                         tracks[currentTrackIndex].classList.add('playing');
+                    } else {
+                        currentAudio.pause();
+                        mainPlayIcon.style.display = 'block';
+                        mainPauseIcon.style.display = 'none';
+                        tracks[currentTrackIndex].classList.remove('playing');
+                    }
+                } else if (tracks.length > 0) {
+                    playTrack(0); // Play the first song if nothing is playing
+                }
+            }
+            
+            function playNextTrack() {
+                 if (isRepeating && currentAudio) {
+                    currentAudio.currentTime = 0;
+                    currentAudio.play();
+                 } else {
+                    playTrack((currentTrackIndex + 1) % tracks.length);
+                 }
+            }
+
+            function playPrevTrack() {
+                if (currentAudio && currentAudio.currentTime > 3) {
+                    currentAudio.currentTime = 0;
+                } else {
+                    playTrack((currentTrackIndex - 1 + tracks.length) % tracks.length);
+                }
+            }
+
+            function updateProgress() {
+                if (currentAudio && currentAudio.duration) {
+                    const progressPercent = (currentAudio.currentTime / currentAudio.duration) * 100;
+                    progressBarInner.style.width = `${progressPercent}%`;
+                    currentTimeEl.textContent = formatTime(currentAudio.currentTime);
+                }
+            }
+
+            function setProgress(e) {
+                const width = this.clientWidth;
+                const clickX = e.offsetX;
+                if (currentAudio && currentAudio.duration) {
+                    currentAudio.currentTime = (clickX / width) * currentAudio.duration;
+                }
+            }
+
+            function formatTime(seconds) {
+                const minutes = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+            }
+
+            // Event Listeners
+            tracks.forEach((item, index) => {
+                const playBtn = item.querySelector('.song-play-pause-btn');
+                playBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (currentTrackIndex === index && currentAudio && !currentAudio.paused) {
+                        togglePlayPause();
+                    } else {
+                        playTrack(index);
+                    }
+                });
+            });
+
+            mainPlayPauseBtn.addEventListener('click', togglePlayPause);
+            nextBtn.addEventListener('click', playNextTrack);
+            prevBtn.addEventListener('click', playPrevTrack);
+            progressBar.addEventListener('click', setProgress);
+            repeatBtn.addEventListener('click', () => {
+                isRepeating = !isRepeating;
+                repeatBtn.style.color = isRepeating ? 'var(--primary)' : 'var(--text-muted)';
+            });
+            
+            window.playPopularTrack = () => {
+                if (currentAudio && !currentAudio.paused) {
+                    togglePlayPause();
+                } else {
+                     playTrack(0);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
