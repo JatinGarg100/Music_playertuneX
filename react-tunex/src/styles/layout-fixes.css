@@ -1,0 +1,60 @@
+/* Layout Alignment Fixes for Dashboard Pages */
+
+/* Override footer margin to work within main-content container */
+.main-content footer {
+    margin-left: 0 !important;
+    width: 100%;
+    margin-top: auto; /* Push footer to bottom */
+}
+
+/* Ensure main-content uses flexbox properly */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Fix header alignment to account for sidebar */
+.main-content header {
+    margin-left: 0;
+    left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+}
+
+/* Adjust for collapsed sidebar */
+.app-container.collapsed .main-content header {
+    left: 80px;
+    width: calc(100% - 80px);
+}
+
+.app-container.collapsed .main-content footer {
+    margin-left: 0 !important;
+}
+
+/* Ensure content area grows to push footer down */
+.main-content > *:not(header):not(footer) {
+    flex: 1 0 auto;
+}
+
+/* Fix footer copyright section alignment */
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0 30px;
+}
+
+/* Responsive fixes for mobile */
+@media (max-width: 768px) {
+    .main-content footer {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    .main-content header {
+        left: 0;
+        width: 100%;
+    }
+}

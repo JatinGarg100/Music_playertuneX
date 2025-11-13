@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-react-app ReactTuneX)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(if [ -d \"songs\" ])",
+      "Bash(then cp -r songs react-tunex/public/)",
+      "Bash(else echo \"Songs folder not found - will need to be created\")",
+      "Bash(fi)",
+      "Bash(find:*)",
+      "Bash(for file in components/*.jsx pages/*.jsx)",
+      "Bash(do sed -i \"/import.*\\.css'';/d\" \"$file\")",
+      "Bash(done)",
+      "Bash(cat:*)",
+      "Bash(npm run dev:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
